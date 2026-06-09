@@ -150,9 +150,29 @@ function initScrollAnimations() {
     });
   }, observerOptions);
 
-  // Observe all elements with animate-on-scroll class
-  const animatedElements = document.querySelectorAll('.animate-on-scroll');
+  // Observe all elements with animate-on-scroll class (except portfolio items, which are added later)
+  const animatedElements = document.querySelectorAll('.animate-on-scroll:not(.portfolio-item)');
   animatedElements.forEach(el => observer.observe(el));
+}
+
+function setupPortfolioScrollAnimations() {
+  const observerOptions = {
+    threshold: CONFIG.observerThreshold,
+    rootMargin: '0px 0px -100px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, observerOptions);
+
+  // Observe portfolio items (added dynamically by initInstagramEmbeds)
+  const portfolioItems = document.querySelectorAll('.portfolio-item.animate-on-scroll');
+  portfolioItems.forEach(el => observer.observe(el));
+  console.log(`[INFO] Observing ${portfolioItems.length} portfolio items for scroll animations`);
 }
 
 // ============================================
@@ -185,6 +205,10 @@ async function initInstagramEmbeds() {
     // Hide loading indicator
     portfolioLoading.style.display = 'none';
     console.log('[SUCCESS] Portfolio grid populated with embed elements');
+
+    // Set up scroll animations for the newly created portfolio items
+    setupPortfolioScrollAnimations();
+    console.log('[INFO] Scroll animations initialized for portfolio items');
 
     // Process Instagram embeds
     setTimeout(() => {
