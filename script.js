@@ -3,25 +3,10 @@
 // ============================================
 
 const portfolioVideos = [
-  // Miscellaneous
-  'https://www.instagram.com/reel/DYzX5eYtHx6/',
-  'https://www.instagram.com/reel/DU2-EEbgtVh/',
-  'https://www.instagram.com/reel/DUXL3_CAjzx/',
-  'https://www.instagram.com/reel/DUc3kccE9r2/',
-  'https://www.instagram.com/reel/DUAAp45E9M3/',
-  'https://www.instagram.com/reel/DTZaU-yEzLm/',
-  'https://www.instagram.com/reel/DOGzGwODFQC/',
-  'https://www.instagram.com/reel/DRSb8FhE-xy/',
-  'https://www.instagram.com/reel/DJbcgMRMgaT/',
-  'https://www.instagram.com/reel/DTsPW_TE0ht/',
-  'https://www.instagram.com/reel/DSxEVbzExYM/',
-  'https://www.instagram.com/reel/DQMQ0GojcRH/',
-  'https://www.instagram.com/reel/DECxv8HNMcT/',
-  'https://www.instagram.com/reel/DT2lIvbgl1D/',
-  'https://www.instagram.com/reel/DTejpzbAkUc/',
-  'https://www.instagram.com/reel/DTNk_EPgkNc/',
-  'https://www.instagram.com/reel/C11DzI1KAsf/',
-  'https://www.instagram.com/reel/DKWSs-miNU5/',
+  // Fitpage (Current Employer - Featured First)
+  'https://www.instagram.com/reel/DIyfB9xN9Lk/',
+  'https://www.instagram.com/reel/DFxO-qTpL2q/',
+  'https://www.instagram.com/reel/DHn2JSyMc2N/',
 
   // India Running
   'https://www.instagram.com/reel/DG7iPyVs2y8/',
@@ -46,11 +31,6 @@ const portfolioVideos = [
   // Ascend
   'https://www.instagram.com/reel/DNsO280XqLM/',
   'https://www.instagram.com/reel/DWT-Mm5iAbK/',
-
-  // Fitpage
-  'https://www.instagram.com/reel/DIyfB9xN9Lk/',
-  'https://www.instagram.com/reel/DFxO-qTpL2q/',
-  'https://www.instagram.com/reel/DHn2JSyMc2N/',
 
   // VS
   'https://www.instagram.com/reel/DS4HAq3DDKY/',
@@ -177,17 +157,21 @@ function initScrollAnimations() {
 // ============================================
 
 async function initInstagramEmbeds() {
+  console.log('🎬 Starting Instagram embeds initialization...');
   const portfolioGrid = document.getElementById('portfolioGrid');
   const portfolioLoading = document.getElementById('portfolioLoading');
 
   if (!portfolioGrid || !portfolioLoading) {
-    console.error('Portfolio grid or loading element not found');
+    console.error('❌ Portfolio grid or loading element not found');
     return;
   }
+
+  console.log(`✅ Found elements. Loading ${portfolioVideos.length} videos...`);
 
   try {
     // Load Instagram embed script
     loadInstagramEmbedScript();
+    console.log('📦 Instagram embed script loading...');
 
     // Create embed elements for each video
     portfolioVideos.forEach((url, index) => {
@@ -197,13 +181,24 @@ async function initInstagramEmbeds() {
 
     // Hide loading indicator
     portfolioLoading.style.display = 'none';
+    console.log('✅ Portfolio grid populated with embed elements');
 
     // Process Instagram embeds
-    if (window.instgrm) {
-      window.instgrm.Embeds.process();
-    }
+    setTimeout(() => {
+      if (window.instgrm) {
+        console.log('✅ Processing Instagram embeds...');
+        window.instgrm.Embeds.process();
+      } else {
+        console.warn('⚠️ Instagram embed script not loaded yet, retrying...');
+        setTimeout(() => {
+          if (window.instgrm) {
+            window.instgrm.Embeds.process();
+          }
+        }, 2000);
+      }
+    }, 1000);
   } catch (error) {
-    console.error('Error loading Instagram embeds:', error);
+    console.error('❌ Error loading Instagram embeds:', error);
     showEmbedError(portfolioGrid, portfolioLoading);
   }
 }
