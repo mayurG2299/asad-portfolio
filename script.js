@@ -157,21 +157,21 @@ function initScrollAnimations() {
 // ============================================
 
 async function initInstagramEmbeds() {
-  console.log('🎬 Starting Instagram embeds initialization...');
+  console.log('[PORTFOLIO] Starting Instagram embeds initialization...');
   const portfolioGrid = document.getElementById('portfolioGrid');
   const portfolioLoading = document.getElementById('portfolioLoading');
 
   if (!portfolioGrid || !portfolioLoading) {
-    console.error('❌ Portfolio grid or loading element not found');
+    console.error('[ERROR] Portfolio grid or loading element not found');
     return;
   }
 
-  console.log(`✅ Found elements. Loading ${portfolioVideos.length} videos...`);
+  console.log(`[SUCCESS] Found elements. Loading ${portfolioVideos.length} videos...`);
 
   try {
     // Load Instagram embed script
     loadInstagramEmbedScript();
-    console.log('📦 Instagram embed script loading...');
+    console.log('[INFO] Instagram embed script loading...');
 
     // Create embed elements for each video
     portfolioVideos.forEach((url, index) => {
@@ -181,15 +181,15 @@ async function initInstagramEmbeds() {
 
     // Hide loading indicator
     portfolioLoading.style.display = 'none';
-    console.log('✅ Portfolio grid populated with embed elements');
+    console.log('[SUCCESS] Portfolio grid populated with embed elements');
 
     // Process Instagram embeds
     setTimeout(() => {
       if (window.instgrm) {
-        console.log('✅ Processing Instagram embeds...');
+        console.log('[SUCCESS] Processing Instagram embeds...');
         window.instgrm.Embeds.process();
       } else {
-        console.warn('⚠️ Instagram embed script not loaded yet, retrying...');
+        console.warn('[WARNING] Instagram embed script not loaded yet, retrying...');
         setTimeout(() => {
           if (window.instgrm) {
             window.instgrm.Embeds.process();
@@ -198,7 +198,7 @@ async function initInstagramEmbeds() {
       }
     }, 1000);
   } catch (error) {
-    console.error('❌ Error loading Instagram embeds:', error);
+    console.error('[ERROR] Error loading Instagram embeds:', error);
     showEmbedError(portfolioGrid, portfolioLoading);
   }
 }
