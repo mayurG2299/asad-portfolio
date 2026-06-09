@@ -70,6 +70,9 @@ const CONFIG = {
 // ============================================
 
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('[INIT] DOM loaded, initializing...');
+  console.log('[INIT] Script.js is executing!');
+
   initNavigation();
   initScrollAnimations();
   initInstagramEmbeds();
