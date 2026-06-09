@@ -1,0 +1,257 @@
+// ============================================
+// Portfolio Video Data
+// ============================================
+
+const portfolioVideos = [
+  // Miscellaneous
+  'https://www.instagram.com/reel/DYzX5eYtHx6/',
+  'https://www.instagram.com/reel/DU2-EEbgtVh/',
+  'https://www.instagram.com/reel/DUXL3_CAjzx/',
+  'https://www.instagram.com/reel/DUc3kccE9r2/',
+  'https://www.instagram.com/reel/DUAAp45E9M3/',
+  'https://www.instagram.com/reel/DTZaU-yEzLm/',
+  'https://www.instagram.com/reel/DOGzGwODFQC/',
+  'https://www.instagram.com/reel/DRSb8FhE-xy/',
+  'https://www.instagram.com/reel/DJbcgMRMgaT/',
+  'https://www.instagram.com/reel/DTsPW_TE0ht/',
+  'https://www.instagram.com/reel/DSxEVbzExYM/',
+  'https://www.instagram.com/reel/DQMQ0GojcRH/',
+  'https://www.instagram.com/reel/DECxv8HNMcT/',
+  'https://www.instagram.com/reel/DT2lIvbgl1D/',
+  'https://www.instagram.com/reel/DTejpzbAkUc/',
+  'https://www.instagram.com/reel/DTNk_EPgkNc/',
+  'https://www.instagram.com/reel/C11DzI1KAsf/',
+  'https://www.instagram.com/reel/DKWSs-miNU5/',
+
+  // India Running
+  'https://www.instagram.com/reel/DG7iPyVs2y8/',
+  'https://www.instagram.com/reel/DN8OMpfCNet/',
+  'https://www.instagram.com/reel/DPtAulPApWH/',
+  'https://www.instagram.com/reel/DOcm6z_CT-Y/',
+  'https://www.instagram.com/reel/DMF_kSNJEEF/',
+  'https://www.instagram.com/reel/DMQFFB3IJDY/',
+  'https://www.instagram.com/reel/DLupsYZxo4q/',
+  'https://www.instagram.com/reel/DGSbf_rCqTO/',
+  'https://www.instagram.com/reel/DA-qlk9yCku/',
+  'https://www.instagram.com/reel/DAuwNZJohI0/',
+
+  // Captured
+  'https://www.instagram.com/reel/DL7Wl1_MMtf/',
+  'https://www.instagram.com/reel/DGkGCTWNGY0/',
+  'https://www.instagram.com/reel/DA8bdAyyUrQ/',
+  'https://www.instagram.com/reel/C_DH0AbyrYs/',
+  'https://www.instagram.com/reel/DDCSebcyohE/',
+  'https://www.instagram.com/reel/C_-AVePSjT-/',
+
+  // Ascend
+  'https://www.instagram.com/reel/DNsO280XqLM/',
+  'https://www.instagram.com/reel/DWT-Mm5iAbK/',
+
+  // Fitpage
+  'https://www.instagram.com/reel/DIyfB9xN9Lk/',
+  'https://www.instagram.com/reel/DFxO-qTpL2q/',
+  'https://www.instagram.com/reel/DHn2JSyMc2N/',
+
+  // VS
+  'https://www.instagram.com/reel/DS4HAq3DDKY/',
+  'https://www.instagram.com/reel/DSmR-66kyjo/',
+
+  // Wesness
+  'https://www.instagram.com/reel/C8oOXpVozyZ/',
+  'https://www.instagram.com/reel/C7RW5IeoRE6/',
+  'https://www.instagram.com/reel/C39eOGry8bM/',
+  'https://www.instagram.com/reel/C6D_GSkI2U5/',
+
+  // BAPHM
+  'https://www.instagram.com/reel/DNS6BdFiLvO/',
+  'https://www.instagram.com/reel/DKjd_RRCkvS/',
+  'https://www.instagram.com/reel/DQNlDQckyAD/',
+  'https://www.instagram.com/reel/DQJWcwPAuJ2/',
+  'https://www.instagram.com/reel/DP-peuMEQvI/',
+  'https://www.instagram.com/reel/DOyImyeEcwC/',
+  'https://www.instagram.com/reel/DOOCvjPEUlQ/',
+  'https://www.instagram.com/reel/DBVQlJgoEqw/',
+  'https://www.instagram.com/reel/DJRFzgNCGfv/',
+  'https://www.instagram.com/reel/DK1lJWvil_x/',
+  'https://www.instagram.com/reel/DPJDHLZgvKd/',
+];
+
+// ============================================
+// Configuration
+// ============================================
+
+const CONFIG = {
+  observerThreshold: 0.1,
+  scrollOffset: 50,
+};
+
+// ============================================
+// DOM Ready
+// ============================================
+
+document.addEventListener('DOMContentLoaded', () => {
+  initNavigation();
+  initScrollAnimations();
+  initInstagramEmbeds();
+});
+
+// ============================================
+// Navigation
+// ============================================
+
+function initNavigation() {
+  const navbar = document.getElementById('navbar');
+  const navToggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navMenu');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  // Navbar scroll behavior - add solid background when scrolled
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > CONFIG.scrollOffset) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+
+    // Update active nav link based on scroll position
+    updateActiveNavLink();
+  });
+
+  // Mobile menu toggle
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+
+  // Close mobile menu when link clicked
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+    });
+  });
+}
+
+function updateActiveNavLink() {
+  const sections = document.querySelectorAll('section[id]');
+  const scrollPosition = window.scrollY + 200; // offset for navbar height
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    const sectionId = section.getAttribute('id');
+    const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+
+    if (navLink) {
+      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+        navLink.classList.add('active');
+      }
+    }
+  });
+}
+
+// ============================================
+// Scroll Animations
+// ============================================
+
+function initScrollAnimations() {
+  const observerOptions = {
+    threshold: CONFIG.observerThreshold,
+    rootMargin: '0px 0px -100px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, observerOptions);
+
+  // Observe all elements with animate-on-scroll class
+  const animatedElements = document.querySelectorAll('.animate-on-scroll');
+  animatedElements.forEach(el => observer.observe(el));
+}
+
+// ============================================
+// Instagram Embeds
+// ============================================
+
+async function initInstagramEmbeds() {
+  const portfolioGrid = document.getElementById('portfolioGrid');
+  const portfolioLoading = document.getElementById('portfolioLoading');
+
+  if (!portfolioGrid || !portfolioLoading) {
+    console.error('Portfolio grid or loading element not found');
+    return;
+  }
+
+  try {
+    // Load Instagram embed script
+    loadInstagramEmbedScript();
+
+    // Create embed elements for each video
+    portfolioVideos.forEach((url, index) => {
+      const embedItem = createEmbedElement(url, index);
+      portfolioGrid.appendChild(embedItem);
+    });
+
+    // Hide loading indicator
+    portfolioLoading.style.display = 'none';
+
+    // Process Instagram embeds
+    if (window.instgrm) {
+      window.instgrm.Embeds.process();
+    }
+  } catch (error) {
+    console.error('Error loading Instagram embeds:', error);
+    showEmbedError(portfolioGrid, portfolioLoading);
+  }
+}
+
+function loadInstagramEmbedScript() {
+  if (!document.querySelector('script[src*="instagram.com/embed.js"]')) {
+    const script = document.createElement('script');
+    script.async = true;
+    script.defer = true;
+    script.src = 'https://www.instagram.com/embed.js';
+    document.body.appendChild(script);
+  }
+}
+
+function createEmbedElement(url, index) {
+  const item = document.createElement('div');
+  item.className = 'portfolio-item animate-on-scroll';
+  item.style.transitionDelay = `${index * 0.1}s`;
+
+  // Create Instagram blockquote embed
+  const blockquote = document.createElement('blockquote');
+  blockquote.className = 'instagram-media';
+  blockquote.setAttribute('data-instgrm-permalink', url);
+  blockquote.setAttribute('data-instgrm-version', '14');
+  blockquote.style.background = '#FFF';
+  blockquote.style.border = '0';
+  blockquote.style.borderRadius = '3px';
+  blockquote.style.boxShadow = '0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)';
+  blockquote.style.margin = '1px';
+  blockquote.style.maxWidth = '540px';
+  blockquote.style.minWidth = '326px';
+  blockquote.style.padding = '0';
+  blockquote.style.width = '99.375%';
+
+  // Fallback link
+  const link = document.createElement('a');
+  link.href = url;
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+  link.textContent = 'View on Instagram';
+  blockquote.appendChild(link);
+
+  item.appendChild(blockquote);
+  return item;
+}
+
+function showEmbedError(portfolioGrid, portfolioLoading) {
+  portfolioLoading.innerHTML = `
+    <p style="color: #e74c3c;">Error loading videos. Please refresh the page.</p>
+  `;
+}
