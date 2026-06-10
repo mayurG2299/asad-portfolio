@@ -1,0 +1,512 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "ASAD FAROOQI" [ref=e4] [cursor=pointer]:
+        - /url: "#hero"
+      - list [ref=e5]:
+        - listitem [ref=e6]:
+          - link "About" [ref=e7] [cursor=pointer]:
+            - /url: "#about"
+        - listitem [ref=e8]:
+          - link "Skills" [ref=e9] [cursor=pointer]:
+            - /url: "#skills"
+        - listitem [ref=e10]:
+          - link "Portfolio" [ref=e11] [cursor=pointer]:
+            - /url: "#portfolio"
+        - listitem [ref=e12]:
+          - link "Contact" [ref=e13] [cursor=pointer]:
+            - /url: "#contact"
+  - generic [ref=e15]:
+    - heading "ASAD FAROOQI" [level=1] [ref=e16]
+    - paragraph [ref=e17]: Video Editor & Motion Designer
+    - paragraph [ref=e18]: Crafting visual stories for brands across India
+    - link "View Work" [ref=e19] [cursor=pointer]:
+      - /url: "#portfolio"
+  - generic [ref=e24]:
+    - img "Asad Farooqi - Video Editor" [ref=e26]
+    - generic [ref=e27]:
+      - heading "About Asad" [level=2] [ref=e28]
+      - paragraph [ref=e29]: Asad is a Mumbai-based video editor with over 6 years of professional experience. He has worked with leading brands including Zee Entertainment (Zee5 App), Indian Television (Tellychakkar), and currently creates engaging short-form content at Fitpage. Specializing in motion graphics, social media ads, and storytelling through video, Asad brings creativity and technical precision to every project.
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - generic [ref=e32]: 6+
+          - generic [ref=e33]: Years Experience
+        - generic [ref=e34]:
+          - generic [ref=e35]: 1000+
+          - generic [ref=e36]: Videos Edited
+        - generic [ref=e37]:
+          - generic [ref=e38]: Mumbai
+          - generic [ref=e39]: Based
+  - generic [ref=e41]:
+    - heading "Skills & Tools" [level=2] [ref=e42]
+    - generic [ref=e43]:
+      - generic [ref=e44]:
+        - generic [ref=e46]: 
+        - heading "Adobe Premiere Pro" [level=3] [ref=e47]
+        - paragraph [ref=e48]: 95%
+      - generic [ref=e49]:
+        - generic [ref=e51]: 
+        - heading "Final Cut Pro" [level=3] [ref=e52]
+        - paragraph [ref=e53]: 95%
+      - generic [ref=e54]:
+        - generic [ref=e56]: 
+        - heading "After Effects" [level=3] [ref=e57]
+        - paragraph [ref=e58]: 75%
+      - generic [ref=e59]:
+        - generic [ref=e61]: 
+        - heading "Media Encoder" [level=3] [ref=e62]
+        - paragraph [ref=e63]: 98%
+      - generic [ref=e64]:
+        - generic [ref=e66]: 
+        - heading "Photoshop" [level=3] [ref=e67]
+        - paragraph [ref=e68]: Basic
+      - generic [ref=e69]:
+        - generic [ref=e71]: 
+        - heading "Illustrator" [level=3] [ref=e72]
+        - paragraph [ref=e73]: Basic
+  - generic [ref=e75]:
+    - heading "Trusted by Leading Brands" [level=2] [ref=e76]
+    - generic [ref=e77]:
+      - generic [ref=e78]: Zee5
+      - generic [ref=e79]: Fitpage
+      - generic [ref=e80]: Tellychakkar
+      - generic [ref=e81]: BAPHM
+      - generic [ref=e82]: India Running
+      - generic [ref=e83]: Captured
+      - generic [ref=e84]: Ascend
+      - generic [ref=e85]: VS
+      - generic [ref=e86]: Wesness
+  - generic [ref=e88]:
+    - heading "Portfolio" [level=2] [ref=e89]
+    - paragraph [ref=e90]: A showcase of recent video editing projects
+    - generic [ref=e91]:
+      - iframe [ref=e93]:
+        - generic [ref=f1e5]:
+          - generic [ref=f1e6]:
+            - link "fitpage" [ref=f1e8] [cursor=pointer]:
+              - /url: https://www.instagram.com/fitpage/?utm_source=ig_embed&ig_rid=74bb2019-b9fb-4f01-9e29-de3d06f828ba
+              - img "fitpage" [ref=f1e9]
+            - generic [ref=f1e10]:
+              - link "fitpage Verified" [ref=f1e11] [cursor=pointer]:
+                - /url: https://www.instagram.com/fitpage/?utm_source=ig_embed&ig_rid=74bb2019-b9fb-4f01-9e29-de3d06f828ba
+                - generic [ref=f1e12]: fitpage
+                - generic [ref=f1e14]: Verified
+              - generic [ref=f1e15]: Original audio
+            - link "View profile" [ref=f1e17] [cursor=pointer]:
+              - /url: https://www.instagram.com/fitpage/?utm_source=ig_embed&ig_rid=74bb2019-b9fb-4f01-9e29-de3d06f828ba
+          - generic [ref=f1e18]:
+            - link "Instagram post shared by @fitpage" [ref=f1e19] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DIyfB9xN9Lk/?utm_source=ig_embed&ig_rid=74bb2019-b9fb-4f01-9e29-de3d06f828ba
+              - img "Instagram post shared by @fitpage"
+            - generic [ref=f1e21]:
+              - button "Play" [ref=f1e25]
+              - button "Control" [ref=f1e26] [cursor=pointer]
+          - generic [ref=f1e27]:
+            - link "fitpage fitpage Verified 1,120 posts · 15K followers" [ref=f1e28] [cursor=pointer]:
+              - /url: https://www.instagram.com/fitpage/?utm_source=ig_embed&ig_rid=74bb2019-b9fb-4f01-9e29-de3d06f828ba
+              - generic [ref=f1e29]:
+                - img "fitpage" [ref=f1e30]
+                - generic [ref=f1e31]:
+                  - generic [ref=f1e32]:
+                    - generic [ref=f1e33]: fitpage
+                    - generic [ref=f1e35]: Verified
+                  - generic [ref=f1e37]: 1,120 posts · 15K followers
+              - generic [ref=f1e38]:
+                - img [ref=f1e39]
+                - img [ref=f1e40]
+            - link "View more on Instagram" [ref=f1e42] [cursor=pointer]:
+              - /url: https://www.instagram.com/fitpage/?utm_source=ig_embed&ig_rid=74bb2019-b9fb-4f01-9e29-de3d06f828ba
+          - generic [ref=f1e43]:
+            - link "Like" [ref=f1e44] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DIyfB9xN9Lk/?utm_source=ig_embed&ig_rid=74bb2019-b9fb-4f01-9e29-de3d06f828ba
+              - generic: Like
+            - link "Comment" [ref=f1e46] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DIyfB9xN9Lk/?utm_source=ig_embed&ig_rid=74bb2019-b9fb-4f01-9e29-de3d06f828ba
+              - generic [ref=f1e48]: Comment
+            - link "Share" [ref=f1e49] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DIyfB9xN9Lk/?utm_source=ig_embed&ig_rid=74bb2019-b9fb-4f01-9e29-de3d06f828ba
+              - generic [ref=f1e51]: Share
+            - link "Save" [ref=f1e52] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DIyfB9xN9Lk/?utm_source=ig_embed&ig_rid=74bb2019-b9fb-4f01-9e29-de3d06f828ba
+              - generic [ref=f1e54]: Save
+          - link "104 likes" [ref=f1e56] [cursor=pointer]:
+            - /url: https://www.instagram.com/reel/DIyfB9xN9Lk/?utm_source=ig_embed&ig_rid=74bb2019-b9fb-4f01-9e29-de3d06f828ba
+          - generic [ref=f1e57]:
+            - link "Add a comment..." [ref=f1e58] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DIyfB9xN9Lk/?utm_source=ig_embed&ig_rid=74bb2019-b9fb-4f01-9e29-de3d06f828ba
+            - link "Instagram" [ref=f1e59] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DIyfB9xN9Lk/?utm_source=ig_embed&ig_rid=74bb2019-b9fb-4f01-9e29-de3d06f828ba
+              - generic [ref=f1e61]: Instagram
+      - iframe [ref=e95]:
+        - generic [ref=f2e5]:
+          - generic [ref=f2e6]:
+            - link "fitpage" [ref=f2e8] [cursor=pointer]:
+              - /url: https://www.instagram.com/fitpage/?utm_source=ig_embed&ig_rid=0c794625-d151-49a1-b7de-fe86e5f6b69a
+              - img "fitpage" [ref=f2e9]
+            - generic [ref=f2e10]:
+              - link "fitpage Verified" [ref=f2e11] [cursor=pointer]:
+                - /url: https://www.instagram.com/fitpage/?utm_source=ig_embed&ig_rid=0c794625-d151-49a1-b7de-fe86e5f6b69a
+                - generic [ref=f2e12]: fitpage
+                - generic [ref=f2e14]: Verified
+              - generic [ref=f2e15]: Original audio
+            - link "View profile" [ref=f2e17] [cursor=pointer]:
+              - /url: https://www.instagram.com/fitpage/?utm_source=ig_embed&ig_rid=0c794625-d151-49a1-b7de-fe86e5f6b69a
+          - generic [ref=f2e18]:
+            - link "Instagram post shared by @fitpage" [ref=f2e19] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DFxO-qTpL2q/?utm_source=ig_embed&ig_rid=0c794625-d151-49a1-b7de-fe86e5f6b69a
+              - img "Instagram post shared by @fitpage"
+            - generic [ref=f2e21]:
+              - button "Play" [ref=f2e25]
+              - button "Control" [ref=f2e26] [cursor=pointer]
+          - generic [ref=f2e27]:
+            - link "fitpage fitpage Verified 1,120 posts · 15K followers" [ref=f2e28] [cursor=pointer]:
+              - /url: https://www.instagram.com/fitpage/?utm_source=ig_embed&ig_rid=0c794625-d151-49a1-b7de-fe86e5f6b69a
+              - generic [ref=f2e29]:
+                - img "fitpage" [ref=f2e30]
+                - generic [ref=f2e31]:
+                  - generic [ref=f2e32]:
+                    - generic [ref=f2e33]: fitpage
+                    - generic [ref=f2e35]: Verified
+                  - generic [ref=f2e37]: 1,120 posts · 15K followers
+              - generic [ref=f2e38]:
+                - img [ref=f2e39]
+                - img [ref=f2e40]
+            - link "View more on Instagram" [ref=f2e42] [cursor=pointer]:
+              - /url: https://www.instagram.com/fitpage/?utm_source=ig_embed&ig_rid=0c794625-d151-49a1-b7de-fe86e5f6b69a
+          - generic [ref=f2e43]:
+            - link "Like" [ref=f2e44] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DFxO-qTpL2q/?utm_source=ig_embed&ig_rid=0c794625-d151-49a1-b7de-fe86e5f6b69a
+              - generic: Like
+            - link "Comment" [ref=f2e46] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DFxO-qTpL2q/?utm_source=ig_embed&ig_rid=0c794625-d151-49a1-b7de-fe86e5f6b69a
+              - generic [ref=f2e48]: Comment
+            - link "Share" [ref=f2e49] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DFxO-qTpL2q/?utm_source=ig_embed&ig_rid=0c794625-d151-49a1-b7de-fe86e5f6b69a
+              - generic [ref=f2e51]: Share
+            - link "Save" [ref=f2e52] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DFxO-qTpL2q/?utm_source=ig_embed&ig_rid=0c794625-d151-49a1-b7de-fe86e5f6b69a
+              - generic [ref=f2e54]: Save
+          - link "46 likes" [ref=f2e56] [cursor=pointer]:
+            - /url: https://www.instagram.com/reel/DFxO-qTpL2q/?utm_source=ig_embed&ig_rid=0c794625-d151-49a1-b7de-fe86e5f6b69a
+          - generic [ref=f2e57]:
+            - link "Add a comment..." [ref=f2e58] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DFxO-qTpL2q/?utm_source=ig_embed&ig_rid=0c794625-d151-49a1-b7de-fe86e5f6b69a
+            - link "Instagram" [ref=f2e59] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DFxO-qTpL2q/?utm_source=ig_embed&ig_rid=0c794625-d151-49a1-b7de-fe86e5f6b69a
+              - generic [ref=f2e61]: Instagram
+      - iframe [ref=e97]:
+        - generic [ref=f3e5]:
+          - generic [ref=f3e6]:
+            - link "fitpage" [ref=f3e8] [cursor=pointer]:
+              - /url: https://www.instagram.com/fitpage/?utm_source=ig_embed&ig_rid=8e247149-489a-46a5-aed6-bdda57c0e642
+              - img "fitpage" [ref=f3e9]
+            - generic [ref=f3e10]:
+              - link "fitpage Verified" [ref=f3e11] [cursor=pointer]:
+                - /url: https://www.instagram.com/fitpage/?utm_source=ig_embed&ig_rid=8e247149-489a-46a5-aed6-bdda57c0e642
+                - generic [ref=f3e12]: fitpage
+                - generic [ref=f3e14]: Verified
+              - generic [ref=f3e15]: Original audio
+            - link "View profile" [ref=f3e17] [cursor=pointer]:
+              - /url: https://www.instagram.com/fitpage/?utm_source=ig_embed&ig_rid=8e247149-489a-46a5-aed6-bdda57c0e642
+          - generic [ref=f3e18]:
+            - link "Instagram post shared by @fitpage" [ref=f3e19] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DHn2JSyMc2N/?utm_source=ig_embed&ig_rid=8e247149-489a-46a5-aed6-bdda57c0e642
+              - img "Instagram post shared by @fitpage"
+            - generic [ref=f3e21]:
+              - button "Play" [ref=f3e25]
+              - button "Control" [ref=f3e26] [cursor=pointer]
+          - generic [ref=f3e27]:
+            - link "fitpage fitpage Verified 1,120 posts · 15K followers" [ref=f3e28] [cursor=pointer]:
+              - /url: https://www.instagram.com/fitpage/?utm_source=ig_embed&ig_rid=8e247149-489a-46a5-aed6-bdda57c0e642
+              - generic [ref=f3e29]:
+                - img "fitpage" [ref=f3e30]
+                - generic [ref=f3e31]:
+                  - generic [ref=f3e32]:
+                    - generic [ref=f3e33]: fitpage
+                    - generic [ref=f3e35]: Verified
+                  - generic [ref=f3e37]: 1,120 posts · 15K followers
+              - generic [ref=f3e38]:
+                - img [ref=f3e39]
+                - img [ref=f3e40]
+            - link "View more on Instagram" [ref=f3e42] [cursor=pointer]:
+              - /url: https://www.instagram.com/fitpage/?utm_source=ig_embed&ig_rid=8e247149-489a-46a5-aed6-bdda57c0e642
+          - generic [ref=f3e43]:
+            - link "Like" [ref=f3e44] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DHn2JSyMc2N/?utm_source=ig_embed&ig_rid=8e247149-489a-46a5-aed6-bdda57c0e642
+              - generic: Like
+            - link "Comment" [ref=f3e46] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DHn2JSyMc2N/?utm_source=ig_embed&ig_rid=8e247149-489a-46a5-aed6-bdda57c0e642
+              - generic [ref=f3e48]: Comment
+            - link "Share" [ref=f3e49] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DHn2JSyMc2N/?utm_source=ig_embed&ig_rid=8e247149-489a-46a5-aed6-bdda57c0e642
+              - generic [ref=f3e51]: Share
+            - link "Save" [ref=f3e52] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DHn2JSyMc2N/?utm_source=ig_embed&ig_rid=8e247149-489a-46a5-aed6-bdda57c0e642
+              - generic [ref=f3e54]: Save
+          - link "18 likes" [ref=f3e56] [cursor=pointer]:
+            - /url: https://www.instagram.com/reel/DHn2JSyMc2N/?utm_source=ig_embed&ig_rid=8e247149-489a-46a5-aed6-bdda57c0e642
+          - generic [ref=f3e57]:
+            - link "Add a comment..." [ref=f3e58] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DHn2JSyMc2N/?utm_source=ig_embed&ig_rid=8e247149-489a-46a5-aed6-bdda57c0e642
+            - link "Instagram" [ref=f3e59] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DHn2JSyMc2N/?utm_source=ig_embed&ig_rid=8e247149-489a-46a5-aed6-bdda57c0e642
+              - generic [ref=f3e61]: Instagram
+      - iframe [ref=e99]:
+        - generic [ref=f4e5]:
+          - generic [ref=f4e6]:
+            - link "indiarunning_" [ref=f4e8] [cursor=pointer]:
+              - /url: https://www.instagram.com/indiarunning_/?utm_source=ig_embed&ig_rid=e9f58321-936b-48a4-8f6b-e72ee4416e23
+              - img "indiarunning_" [ref=f4e9]
+            - generic [ref=f4e10]:
+              - link "indiarunning_" [ref=f4e11] [cursor=pointer]:
+                - /url: https://www.instagram.com/indiarunning_/?utm_source=ig_embed&ig_rid=e9f58321-936b-48a4-8f6b-e72ee4416e23
+                - generic [ref=f4e12]: indiarunning_
+              - generic [ref=f4e13]: Original audio
+            - link "View profile" [ref=f4e15] [cursor=pointer]:
+              - /url: https://www.instagram.com/indiarunning_/?utm_source=ig_embed&ig_rid=e9f58321-936b-48a4-8f6b-e72ee4416e23
+          - generic [ref=f4e16]:
+            - link "Instagram post shared by @indiarunning_" [ref=f4e17] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DG7iPyVs2y8/?utm_source=ig_embed&ig_rid=e9f58321-936b-48a4-8f6b-e72ee4416e23
+              - img "Instagram post shared by @indiarunning_"
+            - generic [ref=f4e19]:
+              - button "Play" [ref=f4e23]
+              - button "Control" [ref=f4e24] [cursor=pointer]
+          - generic [ref=f4e25]:
+            - link "indiarunning_ indiarunning_ 883 posts · 55K followers" [ref=f4e26] [cursor=pointer]:
+              - /url: https://www.instagram.com/indiarunning_/?utm_source=ig_embed&ig_rid=e9f58321-936b-48a4-8f6b-e72ee4416e23
+              - generic [ref=f4e27]:
+                - img "indiarunning_" [ref=f4e28]
+                - generic [ref=f4e29]:
+                  - generic [ref=f4e31]: indiarunning_
+                  - generic [ref=f4e33]: 883 posts · 55K followers
+              - generic [ref=f4e34]:
+                - img [ref=f4e35]
+                - img [ref=f4e36]
+            - link "View more on Instagram" [ref=f4e38] [cursor=pointer]:
+              - /url: https://www.instagram.com/indiarunning_/?utm_source=ig_embed&ig_rid=e9f58321-936b-48a4-8f6b-e72ee4416e23
+          - generic [ref=f4e39]:
+            - link "Like" [ref=f4e40] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DG7iPyVs2y8/?utm_source=ig_embed&ig_rid=e9f58321-936b-48a4-8f6b-e72ee4416e23
+              - generic: Like
+            - link "Comment" [ref=f4e42] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DG7iPyVs2y8/?utm_source=ig_embed&ig_rid=e9f58321-936b-48a4-8f6b-e72ee4416e23
+              - generic [ref=f4e44]: Comment
+            - link "Share" [ref=f4e45] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DG7iPyVs2y8/?utm_source=ig_embed&ig_rid=e9f58321-936b-48a4-8f6b-e72ee4416e23
+              - generic [ref=f4e47]: Share
+            - link "Save" [ref=f4e48] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DG7iPyVs2y8/?utm_source=ig_embed&ig_rid=e9f58321-936b-48a4-8f6b-e72ee4416e23
+              - generic [ref=f4e50]: Save
+          - link "517 likes" [ref=f4e52] [cursor=pointer]:
+            - /url: https://www.instagram.com/reel/DG7iPyVs2y8/?utm_source=ig_embed&ig_rid=e9f58321-936b-48a4-8f6b-e72ee4416e23
+          - generic [ref=f4e53]:
+            - link "Add a comment..." [ref=f4e54] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DG7iPyVs2y8/?utm_source=ig_embed&ig_rid=e9f58321-936b-48a4-8f6b-e72ee4416e23
+            - link "Instagram" [ref=f4e55] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DG7iPyVs2y8/?utm_source=ig_embed&ig_rid=e9f58321-936b-48a4-8f6b-e72ee4416e23
+              - generic [ref=f4e57]: Instagram
+      - generic [ref=e100]:
+        - iframe [ref=e101]:
+          
+        - blockquote [ref=e102]:
+          - link "View on Instagram" [ref=e103] [cursor=pointer]:
+            - /url: https://www.instagram.com/reel/DN8OMpfCNet/
+      - iframe [ref=e105]:
+        - generic [ref=f6e5]:
+          - generic [ref=f6e6]:
+            - generic [ref=f6e7]:
+              - link "bajaj_pune_marathon" [ref=f6e8] [cursor=pointer]:
+                - /url: https://www.instagram.com/indiarunning_/?utm_source=ig_embed&ig_rid=4b921873-273e-4d20-9d7b-aea77e163b35
+                - img "bajaj_pune_marathon" [ref=f6e9]
+              - link "bajaj_pune_marathon" [ref=f6e10] [cursor=pointer]:
+                - /url: https://www.instagram.com/bajaj_pune_marathon/?utm_source=ig_embed&ig_rid=4b921873-273e-4d20-9d7b-aea77e163b35
+                - img "bajaj_pune_marathon" [ref=f6e11]
+            - generic [ref=f6e12]:
+              - generic [ref=f6e13]:
+                - link "bajaj_pune_marathon" [ref=f6e14] [cursor=pointer]:
+                  - /url: https://www.instagram.com/bajaj_pune_marathon/?utm_source=ig_embed&ig_rid=4b921873-273e-4d20-9d7b-aea77e163b35
+                  - generic [ref=f6e15]: bajaj_pune_marathon
+                - generic [ref=f6e16]: and
+                - link "indiarunning_" [ref=f6e17] [cursor=pointer]:
+                  - /url: https://www.instagram.com/indiarunning_/?utm_source=ig_embed&ig_rid=4b921873-273e-4d20-9d7b-aea77e163b35
+                  - generic [ref=f6e18]: indiarunning_
+              - generic [ref=f6e19]: delhihalfmarathon · Original audio
+            - link "View profile" [ref=f6e21] [cursor=pointer]:
+              - /url: https://www.instagram.com/bajaj_pune_marathon/?utm_source=ig_embed&ig_rid=4b921873-273e-4d20-9d7b-aea77e163b35
+          - generic [ref=f6e22]:
+            - link "Instagram post shared by @bajaj_pune_marathon" [ref=f6e23] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DPtAulPApWH/?utm_source=ig_embed&ig_rid=4b921873-273e-4d20-9d7b-aea77e163b35
+              - img "Instagram post shared by @bajaj_pune_marathon"
+            - generic [ref=f6e25]:
+              - button "Play" [ref=f6e29]
+              - button "Control" [ref=f6e30] [cursor=pointer]
+          - generic [ref=f6e31]:
+            - link "bajaj_pune_marathon bajaj_pune_marathon 937 posts · 10K followers" [ref=f6e32] [cursor=pointer]:
+              - /url: https://www.instagram.com/bajaj_pune_marathon/?utm_source=ig_embed&ig_rid=4b921873-273e-4d20-9d7b-aea77e163b35
+              - generic [ref=f6e33]:
+                - img "bajaj_pune_marathon" [ref=f6e34]
+                - generic [ref=f6e35]:
+                  - generic [ref=f6e37]: bajaj_pune_marathon
+                  - generic [ref=f6e39]: 937 posts · 10K followers
+              - generic [ref=f6e40]:
+                - img [ref=f6e41]
+                - img [ref=f6e42]
+            - link "View more on Instagram" [ref=f6e44] [cursor=pointer]:
+              - /url: https://www.instagram.com/bajaj_pune_marathon/?utm_source=ig_embed&ig_rid=4b921873-273e-4d20-9d7b-aea77e163b35
+          - generic [ref=f6e45]:
+            - link "Like" [ref=f6e46] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DPtAulPApWH/?utm_source=ig_embed&ig_rid=4b921873-273e-4d20-9d7b-aea77e163b35
+              - generic: Like
+            - link "Comment" [ref=f6e48] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DPtAulPApWH/?utm_source=ig_embed&ig_rid=4b921873-273e-4d20-9d7b-aea77e163b35
+              - generic [ref=f6e50]: Comment
+            - link "Share" [ref=f6e51] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DPtAulPApWH/?utm_source=ig_embed&ig_rid=4b921873-273e-4d20-9d7b-aea77e163b35
+              - generic [ref=f6e53]: Share
+            - link "Save" [ref=f6e54] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DPtAulPApWH/?utm_source=ig_embed&ig_rid=4b921873-273e-4d20-9d7b-aea77e163b35
+              - generic [ref=f6e56]: Save
+          - link "78 likes" [ref=f6e58] [cursor=pointer]:
+            - /url: https://www.instagram.com/reel/DPtAulPApWH/?utm_source=ig_embed&ig_rid=4b921873-273e-4d20-9d7b-aea77e163b35
+          - generic [ref=f6e59]:
+            - link "Add a comment..." [ref=f6e60] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DPtAulPApWH/?utm_source=ig_embed&ig_rid=4b921873-273e-4d20-9d7b-aea77e163b35
+            - link "Instagram" [ref=f6e61] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DPtAulPApWH/?utm_source=ig_embed&ig_rid=4b921873-273e-4d20-9d7b-aea77e163b35
+              - generic [ref=f6e63]: Instagram
+      - generic [ref=e106]:
+        - iframe [ref=e107]:
+          
+        - blockquote [ref=e108]:
+          - link "View on Instagram" [ref=e109] [cursor=pointer]:
+            - /url: https://www.instagram.com/reel/DOcm6z_CT-Y/
+      - generic [ref=e110]:
+        - iframe [ref=e111]:
+          
+        - blockquote [ref=e112]:
+          - link "View on Instagram" [ref=e113] [cursor=pointer]:
+            - /url: https://www.instagram.com/reel/DMF_kSNJEEF/
+      - blockquote [ref=e115]:
+        - link "View on Instagram" [ref=e116] [cursor=pointer]:
+          - /url: https://www.instagram.com/reel/DMQFFB3IJDY/
+      - blockquote [ref=e118]:
+        - link "View on Instagram" [ref=e119] [cursor=pointer]:
+          - /url: https://www.instagram.com/reel/DLupsYZxo4q/
+      - blockquote [ref=e121]:
+        - link "View on Instagram" [ref=e122] [cursor=pointer]:
+          - /url: https://www.instagram.com/reel/DGSbf_rCqTO/
+      - blockquote [ref=e124]:
+        - link "View on Instagram" [ref=e125] [cursor=pointer]:
+          - /url: https://www.instagram.com/reel/DA-qlk9yCku/
+      - blockquote [ref=e127]:
+        - link "View on Instagram" [ref=e128] [cursor=pointer]:
+          - /url: https://www.instagram.com/reel/DAuwNZJohI0/
+      - blockquote [ref=e130]:
+        - link "View on Instagram" [ref=e131] [cursor=pointer]:
+          - /url: https://www.instagram.com/reel/DL7Wl1_MMtf/
+      - blockquote [ref=e133]:
+        - link "View on Instagram" [ref=e134] [cursor=pointer]:
+          - /url: https://www.instagram.com/reel/DGkGCTWNGY0/
+      - blockquote [ref=e136]:
+        - link "View on Instagram" [ref=e137] [cursor=pointer]:
+          - /url: https://www.instagram.com/reel/DA8bdAyyUrQ/
+      - blockquote [ref=e139]:
+        - link "View on Instagram" [ref=e140] [cursor=pointer]:
+          - /url: https://www.instagram.com/reel/C_DH0AbyrYs/
+      - blockquote [ref=e142]:
+        - link "View on Instagram" [ref=e143] [cursor=pointer]:
+          - /url: https://www.instagram.com/reel/DDCSebcyohE/
+      - blockquote [ref=e145]:
+        - link "View on Instagram" [ref=e146] [cursor=pointer]:
+          - /url: https://www.instagram.com/reel/C_-AVePSjT-/
+      - blockquote [ref=e148]:
+        - link "View on Instagram" [ref=e149] [cursor=pointer]:
+          - /url: https://www.instagram.com/reel/DNsO280XqLM/
+      - blockquote [ref=e151]:
+        - link "View on Instagram" [ref=e152] [cursor=pointer]:
+          - /url: https://www.instagram.com/reel/DWT-Mm5iAbK/
+      - blockquote [ref=e154]:
+        - link "View on Instagram" [ref=e155] [cursor=pointer]:
+          - /url: https://www.instagram.com/reel/DS4HAq3DDKY/
+      - blockquote [ref=e157]:
+        - link "View on Instagram" [ref=e158] [cursor=pointer]:
+          - /url: https://www.instagram.com/reel/DSmR-66kyjo/
+      - blockquote [ref=e160]:
+        - link "View on Instagram" [ref=e161] [cursor=pointer]:
+          - /url: https://www.instagram.com/reel/C8oOXpVozyZ/
+      - blockquote [ref=e163]:
+        - link "View on Instagram" [ref=e164] [cursor=pointer]:
+          - /url: https://www.instagram.com/reel/C7RW5IeoRE6/
+      - blockquote [ref=e166]:
+        - link "View on Instagram" [ref=e167] [cursor=pointer]:
+          - /url: https://www.instagram.com/reel/C39eOGry8bM/
+      - blockquote [ref=e169]:
+        - link "View on Instagram" [ref=e170] [cursor=pointer]:
+          - /url: https://www.instagram.com/reel/C6D_GSkI2U5/
+      - blockquote [ref=e172]:
+        - link "View on Instagram" [ref=e173] [cursor=pointer]:
+          - /url: https://www.instagram.com/reel/DNS6BdFiLvO/
+      - blockquote [ref=e175]:
+        - link "View on Instagram" [ref=e176] [cursor=pointer]:
+          - /url: https://www.instagram.com/reel/DKjd_RRCkvS/
+      - blockquote [ref=e178]:
+        - link "View on Instagram" [ref=e179] [cursor=pointer]:
+          - /url: https://www.instagram.com/reel/DQNlDQckyAD/
+      - blockquote [ref=e181]:
+        - link "View on Instagram" [ref=e182] [cursor=pointer]:
+          - /url: https://www.instagram.com/reel/DQJWcwPAuJ2/
+      - blockquote [ref=e184]:
+        - link "View on Instagram" [ref=e185] [cursor=pointer]:
+          - /url: https://www.instagram.com/reel/DP-peuMEQvI/
+      - blockquote [ref=e187]:
+        - link "View on Instagram" [ref=e188] [cursor=pointer]:
+          - /url: https://www.instagram.com/reel/DOyImyeEcwC/
+      - blockquote [ref=e190]:
+        - link "View on Instagram" [ref=e191] [cursor=pointer]:
+          - /url: https://www.instagram.com/reel/DOOCvjPEUlQ/
+      - blockquote [ref=e193]:
+        - link "View on Instagram" [ref=e194] [cursor=pointer]:
+          - /url: https://www.instagram.com/reel/DBVQlJgoEqw/
+      - blockquote [ref=e196]:
+        - link "View on Instagram" [ref=e197] [cursor=pointer]:
+          - /url: https://www.instagram.com/reel/DJRFzgNCGfv/
+      - blockquote [ref=e199]:
+        - link "View on Instagram" [ref=e200] [cursor=pointer]:
+          - /url: https://www.instagram.com/reel/DK1lJWvil_x/
+      - blockquote [ref=e202]:
+        - link "View on Instagram" [ref=e203] [cursor=pointer]:
+          - /url: https://www.instagram.com/reel/DPJDHLZgvKd/
+  - generic [ref=e206]:
+    - heading "Let's Work Together" [level=2] [ref=e207]
+    - paragraph [ref=e208]: Available for freelance projects and collaborations
+    - generic [ref=e209]:
+      - generic [ref=e210]:
+        - generic [ref=e212]: 
+        - link "asadfarooqui96@gmail.com" [ref=e213] [cursor=pointer]:
+          - /url: mailto:asadfarooqui96@gmail.com
+      - generic [ref=e214]:
+        - generic [ref=e216]: 
+        - link "+91 8779451008" [ref=e217] [cursor=pointer]:
+          - /url: tel:+918779451008
+      - generic [ref=e218]:
+        - generic [ref=e220]: 
+        - generic [ref=e221]: Mumbai, India
+    - generic [ref=e222]:
+      - link "Instagram" [ref=e223] [cursor=pointer]:
+        - /url: https://instagram.com
+        - generic [ref=e224]: 
+        - text: Instagram
+      - link "LinkedIn" [ref=e225] [cursor=pointer]:
+        - /url: https://linkedin.com
+        - generic [ref=e226]: 
+        - text: LinkedIn
+  - contentinfo [ref=e227]:
+    - generic [ref=e228]:
+      - paragraph [ref=e229]: © 2026 Asad Farooqi. All rights reserved.
+      - generic [ref=e230]:
+        - link "Instagram" [ref=e231] [cursor=pointer]:
+          - /url: https://instagram.com
+          - generic [ref=e232]: 
+        - link "LinkedIn" [ref=e233] [cursor=pointer]:
+          - /url: https://linkedin.com
+          - generic [ref=e234]: 

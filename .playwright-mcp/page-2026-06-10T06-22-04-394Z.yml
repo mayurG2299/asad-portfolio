@@ -1,0 +1,116 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "ASAD FAROOQI" [ref=e4] [cursor=pointer]:
+        - /url: "#hero"
+      - list [ref=e5]:
+        - listitem [ref=e6]:
+          - link "About" [ref=e7] [cursor=pointer]:
+            - /url: "#about"
+        - listitem [ref=e8]:
+          - link "Skills" [ref=e9] [cursor=pointer]:
+            - /url: "#skills"
+        - listitem [ref=e10]:
+          - link "Portfolio" [ref=e11] [cursor=pointer]:
+            - /url: "#portfolio"
+        - listitem [ref=e12]:
+          - link "Contact" [ref=e13] [cursor=pointer]:
+            - /url: "#contact"
+  - generic [ref=e15]:
+    - heading "ASAD FAROOQI" [level=1] [ref=e16]
+    - paragraph [ref=e17]: Video Editor & Motion Designer
+    - paragraph [ref=e18]: Crafting visual stories for brands across India
+    - link "View Work" [ref=e19] [cursor=pointer]:
+      - /url: "#portfolio"
+  - generic [ref=e24]:
+    - img "Asad Farooqi - Video Editor" [ref=e26]
+    - generic [ref=e27]:
+      - heading "About Asad" [level=2] [ref=e28]
+      - paragraph [ref=e29]: Asad is a Mumbai-based video editor with over 6 years of professional experience. He has worked with leading brands including Zee Entertainment (Zee5 App), Indian Television (Tellychakkar), and currently creates engaging short-form content at Fitpage. Specializing in motion graphics, social media ads, and storytelling through video, Asad brings creativity and technical precision to every project.
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - generic [ref=e32]: 6+
+          - generic [ref=e33]: Years Experience
+        - generic [ref=e34]:
+          - generic [ref=e35]: 1000+
+          - generic [ref=e36]: Videos Edited
+        - generic [ref=e37]:
+          - generic [ref=e38]: Mumbai
+          - generic [ref=e39]: Based
+  - generic [ref=e41]:
+    - heading "Skills & Tools" [level=2] [ref=e42]
+    - generic [ref=e43]:
+      - generic [ref=e44]:
+        - generic [ref=e46]: 
+        - heading "Adobe Premiere Pro" [level=3] [ref=e47]
+        - paragraph [ref=e48]: 95%
+      - generic [ref=e49]:
+        - generic [ref=e51]: 
+        - heading "Final Cut Pro" [level=3] [ref=e52]
+        - paragraph [ref=e53]: 95%
+      - generic [ref=e54]:
+        - generic [ref=e56]: 
+        - heading "After Effects" [level=3] [ref=e57]
+        - paragraph [ref=e58]: 75%
+      - generic [ref=e59]:
+        - generic [ref=e61]: 
+        - heading "Media Encoder" [level=3] [ref=e62]
+        - paragraph [ref=e63]: 98%
+      - generic [ref=e64]:
+        - generic [ref=e66]: 
+        - heading "Photoshop" [level=3] [ref=e67]
+        - paragraph [ref=e68]: Basic
+      - generic [ref=e69]:
+        - generic [ref=e71]: 
+        - heading "Illustrator" [level=3] [ref=e72]
+        - paragraph [ref=e73]: Basic
+  - generic [ref=e75]:
+    - heading "Trusted by Leading Brands" [level=2] [ref=e76]
+    - generic [ref=e77]:
+      - generic [ref=e78]: Zee5
+      - generic [ref=e79]: Fitpage
+      - generic [ref=e80]: Tellychakkar
+      - generic [ref=e81]: BAPHM
+      - generic [ref=e82]: India Running
+      - generic [ref=e83]: Captured
+      - generic [ref=e84]: Ascend
+      - generic [ref=e85]: VS
+      - generic [ref=e86]: Wesness
+  - generic [ref=e88]:
+    - heading "Portfolio" [level=2] [ref=e89]
+    - paragraph [ref=e90]: A showcase of recent video editing projects
+    - paragraph [ref=e93]: Loading videos...
+  - generic [ref=e96]:
+    - heading "Let's Work Together" [level=2] [ref=e97]
+    - paragraph [ref=e98]: Available for freelance projects and collaborations
+    - generic [ref=e99]:
+      - generic [ref=e100]:
+        - generic [ref=e102]: 
+        - link "asadfarooqui96@gmail.com" [ref=e103] [cursor=pointer]:
+          - /url: mailto:asadfarooqui96@gmail.com
+      - generic [ref=e104]:
+        - generic [ref=e106]: 
+        - link "+91 8779451008" [ref=e107] [cursor=pointer]:
+          - /url: tel:+918779451008
+      - generic [ref=e108]:
+        - generic [ref=e110]: 
+        - generic [ref=e111]: Mumbai, India
+    - generic [ref=e112]:
+      - link "Instagram" [ref=e113] [cursor=pointer]:
+        - /url: https://instagram.com
+        - generic [ref=e114]: 
+        - text: Instagram
+      - link "LinkedIn" [ref=e115] [cursor=pointer]:
+        - /url: https://linkedin.com
+        - generic [ref=e116]: 
+        - text: LinkedIn
+  - contentinfo [ref=e117]:
+    - generic [ref=e118]:
+      - paragraph [ref=e119]: © 2026 Asad Farooqi. All rights reserved.
+      - generic [ref=e120]:
+        - link "Instagram" [ref=e121] [cursor=pointer]:
+          - /url: https://instagram.com
+          - generic [ref=e122]: 
+        - link "LinkedIn" [ref=e123] [cursor=pointer]:
+          - /url: https://linkedin.com
+          - generic [ref=e124]: 
