@@ -525,7 +525,7 @@ ul, ol {
   position: absolute;
   top: 5%;
   bottom: 15%;
-  left: 20%;
+  left: 5%;
   width: 3px;
   background: linear-gradient(
     to bottom,
@@ -538,19 +538,26 @@ ul, ol {
     0 0 15px rgba(255, 255, 255, 0.9),
     0 0 30px rgba(147, 51, 234, 0.6),
     0 0 50px rgba(6, 182, 212, 0.4);
-  animation: playheadSweep 14s ease-in-out infinite;
-  z-index: 1;
+  animation: playheadSweep 10s linear infinite;
+  z-index: 2;
   pointer-events: none;
 }
 
 @keyframes playheadSweep {
-  0%, 100% {
-    left: 10%;
-    opacity: 0.85;
+  0% {
+    left: 5%;
+  }
+  45% {
+    left: 95%;
   }
   50% {
-    left: 90%;
-    opacity: 1;
+    left: 95%;
+  }
+  95% {
+    left: 5%;
+  }
+  100% {
+    left: 5%;
   }
 }
 
@@ -558,35 +565,19 @@ ul, ol {
   max-width: 800px;
   z-index: 1;
   position: relative;
-  -webkit-mask-image: linear-gradient(
-    90deg,
-    black 0%,
-    black 49%,
-    transparent 50%,
-    transparent 100%
-  );
-  mask-image: linear-gradient(
-    90deg,
-    black 0%,
-    black 49%,
-    transparent 50%,
-    transparent 100%
-  );
-  -webkit-mask-size: 300% 100%;
-  mask-size: 300% 100%;
-  -webkit-mask-position: -100% center;
-  mask-position: -100% center;
-  animation: playheadRevealMask 14s ease-in-out infinite;
+  clip-path: inset(0 100% 0 0);
+  animation: revealClip 10s linear infinite;
 }
 
-@keyframes playheadRevealMask {
-  0%, 100% {
-    -webkit-mask-position: -100% center;
-    mask-position: -100% center;
+@keyframes revealClip {
+  0% {
+    clip-path: inset(0 100% 0 0);
   }
-  50% {
-    -webkit-mask-position: 100% center;
-    mask-position: 100% center;
+  45% {
+    clip-path: inset(0 0% 0 0);
+  }
+  100% {
+    clip-path: inset(0 0% 0 0);
   }
 }
 
@@ -595,20 +586,22 @@ ul, ol {
   font-weight: var(--font-weight-bold);
   letter-spacing: 3px;
   margin-bottom: var(--spacing-sm);
-  background: linear-gradient(45deg, #fff, #9333ea, #06b6d4, #fff);
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: gradientShift 8s ease infinite;
+  color: #fff;
+  animation: colorChange 10s linear infinite;
 }
 
-@keyframes gradientShift {
-  0%, 100% {
-    background-position: 0% 50%;
+@keyframes colorChange {
+  0%, 45% {
+    color: #fff;
   }
   50% {
-    background-position: 100% 50%;
+    color: #9333ea;
+  }
+  70% {
+    color: #06b6d4;
+  }
+  95%, 100% {
+    color: #fff;
   }
 }
 
