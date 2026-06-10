@@ -564,59 +564,86 @@ ul, ol {
   font-weight: var(--font-weight-bold);
   letter-spacing: 3px;
   margin-bottom: var(--spacing-sm);
-  animation: fadeInUp 1s ease;
-  background: linear-gradient(45deg, #fff, #9333ea, #06b6d4, #fff);
-  background-size: 300% 300%;
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    transparent 35%,
+    rgba(255, 255, 255, 0.2) 40%,
+    #06b6d4 45%,
+    #9333ea 50%,
+    #fff 55%,
+    #fff 60%,
+    transparent 65%,
+    transparent 100%
+  );
+  background-size: 300% 100%;
+  background-position: -100% center;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: fadeInUp 1s ease, gradientText 8s ease infinite;
-}
-
-@keyframes gradientText {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
+  animation: playheadWipe 14s ease-in-out infinite;
 }
 
 .hero-subtitle {
   font-size: var(--font-size-h3);
   font-weight: var(--font-weight-light);
   margin-bottom: var(--spacing-sm);
-  opacity: 0.9;
-  animation: fadeInUp 1s ease 0.2s backwards;
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    transparent 38%,
+    rgba(255, 255, 255, 0.3) 42%,
+    rgba(255, 255, 255, 0.7) 47%,
+    rgba(255, 255, 255, 0.9) 50%,
+    rgba(255, 255, 255, 0.9) 53%,
+    rgba(255, 255, 255, 0.7) 58%,
+    transparent 62%,
+    transparent 100%
+  );
+  background-size: 300% 100%;
+  background-position: -100% center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: playheadWipe 14s ease-in-out infinite 0.3s;
 }
 
 .hero-tagline {
   font-size: 1.125rem;
   font-weight: var(--font-weight-light);
   margin-bottom: var(--spacing-md);
-  opacity: 0.85;
-  animation: fadeInUp 1s ease 0.4s backwards;
-  overflow: hidden;
-  border-right: 2px solid var(--color-track-purple);
-  white-space: nowrap;
-  animation: fadeInUp 1s ease 0.4s backwards, typing 3s steps(40) 0.8s forwards, blink 0.75s step-end infinite;
-  max-width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    transparent 38%,
+    rgba(255, 255, 255, 0.2) 42%,
+    rgba(255, 255, 255, 0.6) 47%,
+    rgba(255, 255, 255, 0.85) 50%,
+    rgba(255, 255, 255, 0.85) 53%,
+    rgba(255, 255, 255, 0.6) 58%,
+    transparent 62%,
+    transparent 100%
+  );
+  background-size: 300% 100%;
+  background-position: -100% center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: playheadWipe 14s ease-in-out infinite 0.6s;
 }
 
-@keyframes typing {
-  from {
-    width: 0;
+@keyframes playheadWipe {
+  0% {
+    background-position: -100% center;
   }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes blink {
   50% {
-    border-color: transparent;
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -100% center;
   }
 }
 
