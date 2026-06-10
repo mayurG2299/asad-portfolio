@@ -380,7 +380,9 @@ ul, ol {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: var(--color-bg-primary);
+  background:
+    radial-gradient(ellipse at top, rgba(30, 20, 50, 0.4), transparent 60%),
+    linear-gradient(180deg, rgba(15, 15, 20, 0.95), rgba(10, 10, 15, 1));
   color: var(--color-text-light);
   text-align: center;
   padding: var(--spacing-xl) var(--spacing-md);
@@ -388,179 +390,166 @@ ul, ol {
   overflow: hidden;
 }
 
-/* Professional Video Editing Timeline Background */
+/* CINEMA-GRADE TIMELINE with VISIBLE CLIPS */
 .hero::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 5%;
+  left: 5%;
+  right: 5%;
+  bottom: 15%;
   background:
-    /* Time ruler/markers at top */
-    repeating-linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.06) 0px,
-      rgba(255, 255, 255, 0.06) 1px,
+    /* === V1 CLIPS with borders === */
+    /* Clip 1 - Fill */
+    linear-gradient(135deg,
+      rgba(124, 58, 237, 0.4) 0%,
+      rgba(109, 40, 217, 0.5) 100%
+    ) 3% 10px / 18% 70px no-repeat,
+    /* Clip 1 - Top border */
+    linear-gradient(90deg, #9333ea 0%, #9333ea 100%) 3% 10px / 18% 2px no-repeat,
+    /* Clip 1 - Bottom border */
+    linear-gradient(90deg, #7c3aed 0%, #7c3aed 100%) 3% 78px / 18% 2px no-repeat,
+    /* Clip 1 - Left border */
+    linear-gradient(0deg, #9333ea 0%, #9333ea 100%) 3% 10px / 2px 70px no-repeat,
+    /* Clip 1 - Right border */
+    linear-gradient(0deg, #9333ea 0%, #9333ea 100%) 20.8% 10px / 2px 70px no-repeat,
+
+    /* Clip 2 */
+    linear-gradient(135deg, rgba(124, 58, 237, 0.4), rgba(109, 40, 217, 0.5)) 22% 10px / 17% 70px no-repeat,
+    linear-gradient(90deg, #9333ea, #9333ea) 22% 10px / 17% 2px no-repeat,
+    linear-gradient(90deg, #7c3aed, #7c3aed) 22% 78px / 17% 2px no-repeat,
+    linear-gradient(0deg, #9333ea, #9333ea) 22% 10px / 2px 70px no-repeat,
+    linear-gradient(0deg, #9333ea, #9333ea) 38.8% 10px / 2px 70px no-repeat,
+
+    /* Clip 3 */
+    linear-gradient(135deg, rgba(124, 58, 237, 0.4), rgba(109, 40, 217, 0.5)) 40.5% 10px / 23% 70px no-repeat,
+    linear-gradient(90deg, #9333ea, #9333ea) 40.5% 10px / 23% 2px no-repeat,
+    linear-gradient(90deg, #7c3aed, #7c3aed) 40.5% 78px / 23% 2px no-repeat,
+    linear-gradient(0deg, #9333ea, #9333ea) 40.5% 10px / 2px 70px no-repeat,
+    linear-gradient(0deg, #9333ea, #9333ea) 63.3% 10px / 2px 70px no-repeat,
+
+    /* Clip 4 */
+    linear-gradient(135deg, rgba(124, 58, 237, 0.4), rgba(109, 40, 217, 0.5)) 65% 10px / 17% 70px no-repeat,
+    linear-gradient(90deg, #9333ea, #9333ea) 65% 10px / 17% 2px no-repeat,
+    linear-gradient(90deg, #7c3aed, #7c3aed) 65% 78px / 17% 2px no-repeat,
+    linear-gradient(0deg, #9333ea, #9333ea) 65% 10px / 2px 70px no-repeat,
+    linear-gradient(0deg, #9333ea, #9333ea) 81.8% 10px / 2px 70px no-repeat,
+
+    /* Clip 5 */
+    linear-gradient(135deg, rgba(124, 58, 237, 0.4), rgba(109, 40, 217, 0.5)) 83.5% 10px / 14% 70px no-repeat,
+    linear-gradient(90deg, #9333ea, #9333ea) 83.5% 10px / 14% 2px no-repeat,
+    linear-gradient(90deg, #7c3aed, #7c3aed) 83.5% 78px / 14% 2px no-repeat,
+    linear-gradient(0deg, #9333ea, #9333ea) 83.5% 10px / 2px 70px no-repeat,
+    linear-gradient(0deg, #9333ea, #9333ea) 97.3% 10px / 2px 70px no-repeat,
+
+    /* === A1 AUDIO with waveform === */
+    repeating-linear-gradient(90deg,
+      rgba(6, 182, 212, 0.35) 0px,
+      rgba(6, 182, 212, 0.45) 1px,
+      rgba(6, 182, 212, 0.3) 2px,
+      rgba(2, 132, 199, 0.4) 3px,
+      rgba(6, 182, 212, 0.35) 4px,
+      rgba(6, 182, 212, 0.5) 6px,
+      rgba(6, 182, 212, 0.32) 7px
+    ) 4% 200px / 90% 55px no-repeat,
+    linear-gradient(90deg, #06b6d4, #06b6d4) 4% 200px / 90% 2px no-repeat,
+    linear-gradient(90deg, #0891b2, #0891b2) 4% 253px / 90% 2px no-repeat,
+    linear-gradient(0deg, #06b6d4, #06b6d4) 4% 200px / 2px 55px no-repeat,
+    linear-gradient(0deg, #06b6d4, #06b6d4) 93.8% 200px / 2px 55px no-repeat,
+
+    /* === GRAPHICS CLIPS === */
+    linear-gradient(135deg, rgba(249, 115, 22, 0.35), rgba(234, 88, 12, 0.4)) 10% 335px / 7% 45px no-repeat,
+    linear-gradient(90deg, #f97316, #f97316) 10% 335px / 7% 2px no-repeat,
+    linear-gradient(90deg, #ea580c, #ea580c) 10% 378px / 7% 2px no-repeat,
+    linear-gradient(0deg, #f97316, #f97316) 10% 335px / 2px 45px no-repeat,
+    linear-gradient(0deg, #f97316, #f97316) 16.8% 335px / 2px 45px no-repeat,
+
+    linear-gradient(135deg, rgba(249, 115, 22, 0.35), rgba(234, 88, 12, 0.4)) 46% 335px / 6% 45px no-repeat,
+    linear-gradient(90deg, #f97316, #f97316) 46% 335px / 6% 2px no-repeat,
+    linear-gradient(90deg, #ea580c, #ea580c) 46% 378px / 6% 2px no-repeat,
+    linear-gradient(0deg, #f97316, #f97316) 46% 335px / 2px 45px no-repeat,
+    linear-gradient(0deg, #f97316, #f97316) 51.8% 335px / 2px 45px no-repeat,
+
+    linear-gradient(135deg, rgba(249, 115, 22, 0.35), rgba(234, 88, 12, 0.4)) 76% 335px / 5% 45px no-repeat,
+    linear-gradient(90deg, #f97316, #f97316) 76% 335px / 5% 2px no-repeat,
+    linear-gradient(90deg, #ea580c, #ea580c) 76% 378px / 5% 2px no-repeat,
+    linear-gradient(0deg, #f97316, #f97316) 76% 335px / 2px 45px no-repeat,
+    linear-gradient(0deg, #f97316, #f97316) 80.8% 335px / 2px 45px no-repeat,
+
+    /* === COLOR GRADING CLIPS === */
+    linear-gradient(135deg, rgba(16, 185, 129, 0.3), rgba(5, 150, 105, 0.35)) 4% 450px / 32% 50px no-repeat,
+    linear-gradient(90deg, #10b981, #10b981) 4% 450px / 32% 2px no-repeat,
+    linear-gradient(90deg, #059669, #059669) 4% 498px / 32% 2px no-repeat,
+    linear-gradient(0deg, #10b981, #10b981) 4% 450px / 2px 50px no-repeat,
+    linear-gradient(0deg, #10b981, #10b981) 35.8% 450px / 2px 50px no-repeat,
+
+    linear-gradient(135deg, rgba(16, 185, 129, 0.3), rgba(5, 150, 105, 0.35)) 68% 450px / 28% 50px no-repeat,
+    linear-gradient(90deg, #10b981, #10b981) 68% 450px / 28% 2px no-repeat,
+    linear-gradient(90deg, #059669, #059669) 68% 498px / 28% 2px no-repeat,
+    linear-gradient(0deg, #10b981, #10b981) 68% 450px / 2px 50px no-repeat,
+    linear-gradient(0deg, #10b981, #10b981) 95.8% 450px / 2px 50px no-repeat,
+
+    /* Track separators */
+    repeating-linear-gradient(0deg,
+      rgba(255, 255, 255, 0.08) 0px,
+      rgba(255, 255, 255, 0.08) 1px,
       transparent 1px,
-      transparent 8.33%
-    ) 0 30px / 100% 20px,
+      transparent 80px
+    ) 0 10px,
 
-    /* Track 1 - Main Video (V1) */
-    linear-gradient(90deg,
-      transparent 0%, transparent 3%,
-      rgba(147, 51, 234, 0.2) 3%, rgba(147, 51, 234, 0.2) 22%,
-      transparent 22%, transparent 24%,
-      rgba(147, 51, 234, 0.2) 24%, rgba(147, 51, 234, 0.2) 41%,
-      transparent 41%, transparent 45%,
-      rgba(147, 51, 234, 0.2) 45%, rgba(147, 51, 234, 0.2) 68%,
-      transparent 68%, transparent 71%,
-      rgba(147, 51, 234, 0.2) 71%, rgba(147, 51, 234, 0.2) 88%,
-      transparent 88%, transparent 92%,
-      rgba(147, 51, 234, 0.2) 92%, rgba(147, 51, 234, 0.2) 97%,
-      transparent 97%
-    ) 0 60px / 100% 80px no-repeat,
+    /* Time grid */
+    repeating-linear-gradient(90deg,
+      rgba(255, 255, 255, 0.06) 0%,
+      rgba(255, 255, 255, 0.06) 0.15%,
+      transparent 0.15%,
+      transparent 4.54%
+    ),
 
-    /* Track 2 - B-roll Video (V2) */
-    linear-gradient(90deg,
-      transparent 0%, transparent 18%,
-      rgba(139, 92, 246, 0.15) 18%, rgba(139, 92, 246, 0.15) 34%,
-      transparent 34%, transparent 52%,
-      rgba(139, 92, 246, 0.15) 52%, rgba(139, 92, 246, 0.15) 75%,
-      transparent 75%, transparent 82%,
-      rgba(139, 92, 246, 0.15) 82%, rgba(139, 92, 246, 0.15) 94%,
-      transparent 94%
-    ) 0 150px / 100% 70px no-repeat,
-
-    /* Track 3 - Main Audio (A1) with waveform */
-    repeating-linear-gradient(
-      90deg,
-      rgba(6, 182, 212, 0.15) 0px,
-      rgba(6, 182, 212, 0.18) 2px,
-      rgba(6, 182, 212, 0.12) 4px,
-      rgba(6, 182, 212, 0.16) 6px,
-      rgba(6, 182, 212, 0.14) 8px,
-      rgba(6, 182, 212, 0.17) 10px,
-      rgba(6, 182, 212, 0.13) 12px
-    ) 5% 230px / 89% 60px no-repeat,
-
-    /* Track 4 - Music (A2) */
-    linear-gradient(90deg,
-      transparent 0%, transparent 8%,
-      rgba(14, 165, 233, 0.12) 8%, rgba(14, 165, 233, 0.12) 95%,
-      transparent 95%
-    ) 0 300px / 100% 50px no-repeat,
-
-    /* Track 5 - Graphics/Titles */
-    linear-gradient(90deg,
-      transparent 0%, transparent 12%,
-      rgba(249, 115, 22, 0.15) 12%, rgba(249, 115, 22, 0.15) 19%,
-      transparent 19%, transparent 28%,
-      rgba(249, 115, 22, 0.15) 28%, rgba(249, 115, 22, 0.15) 32%,
-      transparent 32%, transparent 48%,
-      rgba(249, 115, 22, 0.15) 48%, rgba(249, 115, 22, 0.15) 54%,
-      transparent 54%, transparent 64%,
-      rgba(249, 115, 22, 0.15) 64%, rgba(249, 115, 22, 0.15) 68%,
-      transparent 68%, transparent 78%,
-      rgba(249, 115, 22, 0.15) 78%, rgba(249, 115, 22, 0.15) 83%,
-      transparent 83%
-    ) 0 360px / 100% 50px no-repeat,
-
-    /* Track 6 - Effects/Transitions */
-    linear-gradient(90deg,
-      transparent 0%, transparent 20%,
-      rgba(234, 88, 12, 0.1) 20%, rgba(234, 88, 12, 0.1) 26%,
-      transparent 26%, transparent 40%,
-      rgba(234, 88, 12, 0.1) 40%, rgba(234, 88, 12, 0.1) 44%,
-      transparent 44%, transparent 66%,
-      rgba(234, 88, 12, 0.1) 66%, rgba(234, 88, 12, 0.1) 70%,
-      transparent 70%, transparent 86%,
-      rgba(234, 88, 12, 0.1) 86%, rgba(234, 88, 12, 0.1) 89%,
-      transparent 89%
-    ) 0 420px / 100% 45px no-repeat,
-
-    /* Track 7 - Color Grading/Adjustment */
-    linear-gradient(90deg,
-      transparent 0%, transparent 5%,
-      rgba(16, 185, 129, 0.12) 5%, rgba(16, 185, 129, 0.12) 38%,
-      transparent 38%, transparent 42%,
-      rgba(16, 185, 129, 0.12) 42%, rgba(16, 185, 129, 0.12) 72%,
-      transparent 72%, transparent 76%,
-      rgba(16, 185, 129, 0.12) 76%, rgba(16, 185, 129, 0.12) 96%,
-      transparent 96%
-    ) 0 475px / 100% 60px no-repeat,
-
-    /* Track 8 - Subtitles/Captions */
-    linear-gradient(90deg,
-      transparent 0%, transparent 6%,
-      rgba(5, 150, 105, 0.1) 6%, rgba(5, 150, 105, 0.1) 15%,
-      transparent 15%, transparent 18%,
-      rgba(5, 150, 105, 0.1) 18%, rgba(5, 150, 105, 0.1) 36%,
-      transparent 36%, transparent 40%,
-      rgba(5, 150, 105, 0.1) 40%, rgba(5, 150, 105, 0.1) 58%,
-      transparent 58%, transparent 62%,
-      rgba(5, 150, 105, 0.1) 62%, rgba(5, 150, 105, 0.1) 81%,
-      transparent 81%, transparent 85%,
-      rgba(5, 150, 105, 0.1) 85%, rgba(5, 150, 105, 0.1) 93%,
-      transparent 93%
-    ) 0 545px / 100% 40px no-repeat,
-
-    /* Horizontal track separators */
-    repeating-linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.04) 0px,
-      rgba(255, 255, 255, 0.04) 1px,
-      transparent 1px,
-      transparent 50px,
-      rgba(255, 255, 255, 0.08) 50px,
-      rgba(255, 255, 255, 0.08) 51px,
-      transparent 51px,
-      transparent 100px
-    ) 0 60px,
-
-    /* Vertical grid lines (time markers) */
-    repeating-linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.02) 0px,
-      rgba(255, 255, 255, 0.02) 1px,
-      transparent 1px,
-      transparent 4.16%
+    /* Panel background */
+    linear-gradient(180deg,
+      rgba(20, 20, 30, 0.7),
+      rgba(15, 15, 25, 0.8)
     );
+  box-shadow:
+    inset 0 0 80px rgba(0, 0, 0, 0.7),
+    inset 0 2px 4px rgba(0, 0, 0, 0.5),
+    0 4px 30px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(147, 51, 234, 0.2);
+  border-radius: 8px;
   z-index: 0;
-  opacity: 0.5;
 }
 
-/* Playhead - moving vertical line */
+/* Animated Playhead */
 .hero::after {
   content: '';
   position: absolute;
-  top: 30px;
-  bottom: 0;
+  top: 5%;
+  bottom: 15%;
   left: 20%;
-  width: 2px;
+  width: 3px;
   background: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.9) 20px,
-    rgba(255, 255, 255, 0.9) calc(100% - 100px),
+    rgba(255, 255, 255, 1) 10px,
+    rgba(255, 255, 255, 1) calc(100% - 10px),
     rgba(255, 255, 255, 0) 100%
   );
   box-shadow:
-    0 0 10px rgba(255, 255, 255, 0.6),
-    0 0 20px rgba(147, 51, 234, 0.4),
-    0 0 30px rgba(6, 182, 212, 0.2);
-  animation: playheadMove 12s ease-in-out infinite;
-  z-index: 0;
+    0 0 15px rgba(255, 255, 255, 0.9),
+    0 0 30px rgba(147, 51, 234, 0.6),
+    0 0 50px rgba(6, 182, 212, 0.4);
+  animation: playheadSweep 14s ease-in-out infinite;
+  z-index: 1;
   pointer-events: none;
 }
 
-@keyframes playheadMove {
+@keyframes playheadSweep {
   0%, 100% {
-    left: 8%;
-    opacity: 0.8;
+    left: 10%;
+    opacity: 0.85;
   }
   50% {
-    left: 88%;
+    left: 90%;
     opacity: 1;
   }
 }
