@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initNavigation();
   initScrollAnimations();
-  initInstagramEmbeds();
+  initCustomVideoPlayers();
 });
 
 // ============================================
@@ -176,11 +176,11 @@ function setupPortfolioScrollAnimations() {
 }
 
 // ============================================
-// Instagram Embeds
+// Custom Video Players (replaces Instagram embeds)
 // ============================================
 
-async function initInstagramEmbeds() {
-  console.log('[PORTFOLIO] Starting Instagram embeds initialization...');
+async function initCustomVideoPlayers() {
+  console.log('[INIT] Starting custom video players initialization...');
   const portfolioGrid = document.getElementById('portfolioGrid');
   const portfolioLoading = document.getElementById('portfolioLoading');
 
@@ -192,87 +192,46 @@ async function initInstagramEmbeds() {
   console.log(`[SUCCESS] Found elements. Loading ${portfolioVideos.length} videos...`);
 
   try {
-    // Load Instagram embed script
-    loadInstagramEmbedScript();
-    console.log('[INFO] Instagram embed script loading...');
+    // Initialize fetcher with cache
+    const cache = new CacheManager();
+    const fetcher = new VideoDataFetcher(cache);
 
-    // Create embed elements for each video
-    portfolioVideos.forEach((url, index) => {
-      const embedItem = createEmbedElement(url, index);
-      portfolioGrid.appendChild(embedItem);
+    // Batch fetch video data (uses cache where available)
+    console.log('[INFO] Fetching video data (checking cache first)...');
+    const videoDataArray = await fetcher.fetchBatch(portfolioVideos, 5);
+
+    // Create player for each video
+    videoDataArray.forEach((videoData, index) => {
+      const playerContainer = document.createElement('div');
+      playerContainer.className = 'portfolio-item animate-on-scroll';
+      playerContainer.style.transitionDelay = `${index * 0.1}s`;
+
+      portfolioGrid.appendChild(playerContainer);
+
+      // Get brand info from Instagram URL
+      const instagramUrl = portfolioVideos[index];
+      const brandInfo = getBrandInfo(instagramUrl);
+
+      // Initialize player
+      const player = new VideoPlayer(playerContainer, videoData, brandInfo);
+      console.log(`[SUCCESS] Player ${index + 1} initialized for ${brandInfo.name}`);
     });
 
     // Hide loading indicator
     portfolioLoading.style.display = 'none';
-    console.log('[SUCCESS] Portfolio grid populated with embed elements');
+    console.log('[SUCCESS] All video players initialized');
 
     // Set up scroll animations for the newly created portfolio items
     setupPortfolioScrollAnimations();
     console.log('[INFO] Scroll animations initialized for portfolio items');
 
-    // Process Instagram embeds
-    setTimeout(() => {
-      if (window.instgrm) {
-        console.log('[SUCCESS] Processing Instagram embeds...');
-        window.instgrm.Embeds.process();
-      } else {
-        console.warn('[WARNING] Instagram embed script not loaded yet, retrying...');
-        setTimeout(() => {
-          if (window.instgrm) {
-            window.instgrm.Embeds.process();
-          }
-        }, 2000);
-      }
-    }, 1000);
   } catch (error) {
-    console.error('[ERROR] Error loading Instagram embeds:', error);
-    showEmbedError(portfolioGrid, portfolioLoading);
+    console.error('[ERROR] Error loading custom video players:', error);
+    showPlayerError(portfolioGrid, portfolioLoading);
   }
 }
 
-function loadInstagramEmbedScript() {
-  if (!document.querySelector('script[src*="instagram.com/embed.js"]')) {
-    const script = document.createElement('script');
-    script.async = true;
-    script.defer = true;
-    script.src = 'https://www.instagram.com/embed.js';
-    document.body.appendChild(script);
-  }
-}
-
-function createEmbedElement(url, index) {
-  const item = document.createElement('div');
-  item.className = 'portfolio-item animate-on-scroll';
-  item.style.transitionDelay = `${index * 0.1}s`;
-
-  // Create Instagram blockquote embed
-  const blockquote = document.createElement('blockquote');
-  blockquote.className = 'instagram-media';
-  blockquote.setAttribute('data-instgrm-permalink', url);
-  blockquote.setAttribute('data-instgrm-version', '14');
-  blockquote.style.background = '#FFF';
-  blockquote.style.border = '0';
-  blockquote.style.borderRadius = '3px';
-  blockquote.style.boxShadow = '0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)';
-  blockquote.style.margin = '1px';
-  blockquote.style.maxWidth = '540px';
-  blockquote.style.minWidth = '326px';
-  blockquote.style.padding = '0';
-  blockquote.style.width = '99.375%';
-
-  // Fallback link
-  const link = document.createElement('a');
-  link.href = url;
-  link.target = '_blank';
-  link.rel = 'noopener noreferrer';
-  link.textContent = 'View on Instagram';
-  blockquote.appendChild(link);
-
-  item.appendChild(blockquote);
-  return item;
-}
-
-function showEmbedError(portfolioGrid, portfolioLoading) {
+function showPlayerError(portfolioGrid, portfolioLoading) {
   portfolioLoading.innerHTML = `
     <p style="color: #e74c3c;">Error loading videos. Please refresh the page.</p>
   `;
