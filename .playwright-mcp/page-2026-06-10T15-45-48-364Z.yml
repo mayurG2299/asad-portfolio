@@ -1,0 +1,149 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "ASAD FAROOQI" [ref=e4] [cursor=pointer]:
+        - /url: "#hero"
+      - list [ref=e5]:
+        - listitem [ref=e6]:
+          - link "About" [ref=e7] [cursor=pointer]:
+            - /url: "#about"
+        - listitem [ref=e8]:
+          - link "Skills" [ref=e9] [cursor=pointer]:
+            - /url: "#skills"
+        - listitem [ref=e10]:
+          - link "Portfolio" [ref=e11] [cursor=pointer]:
+            - /url: "#portfolio"
+        - listitem [ref=e12]:
+          - link "Contact" [ref=e13] [cursor=pointer]:
+            - /url: "#contact"
+  - generic [ref=e15]:
+    - heading "ASAD FAROOQI" [level=1] [ref=e16]
+    - paragraph [ref=e17]: Video Editor & Motion Designer
+    - paragraph [ref=e18]: Crafting visual stories for brands across India
+    - link "View Work" [ref=e19] [cursor=pointer]:
+      - /url: "#portfolio"
+  - generic [ref=e24]:
+    - img "Asad Farooqi - Video Editor" [ref=e26]
+    - generic [ref=e27]:
+      - heading "About Asad" [level=2] [ref=e28]
+      - paragraph [ref=e29]: Asad is a Mumbai-based video editor with over 6 years of professional experience. He has worked with leading brands including Zee Entertainment (Zee5 App), Indian Television (Tellychakkar), and currently creates engaging short-form content at Fitpage. Specializing in motion graphics, social media ads, and storytelling through video, Asad brings creativity and technical precision to every project.
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - generic [ref=e32]: 6+
+          - generic [ref=e33]: Years Experience
+        - generic [ref=e34]:
+          - generic [ref=e35]: 1000+
+          - generic [ref=e36]: Videos Edited
+        - generic [ref=e37]:
+          - generic [ref=e38]: Mumbai
+          - generic [ref=e39]: Based
+  - generic [ref=e41]:
+    - heading "Skills & Tools" [level=2] [ref=e42]
+    - generic [ref=e44]:
+      - generic [ref=e45]:
+        - generic [ref=e47]: 
+        - heading "Adobe Premiere Pro" [level=3] [ref=e48]
+        - paragraph [ref=e49]: 95%
+      - generic [ref=e50]:
+        - generic [ref=e52]: 
+        - heading "Final Cut Pro" [level=3] [ref=e53]
+        - paragraph [ref=e54]: 95%
+      - generic [ref=e55]:
+        - generic [ref=e57]: 
+        - heading "After Effects" [level=3] [ref=e58]
+        - paragraph [ref=e59]: 75%
+      - generic [ref=e60]:
+        - generic [ref=e62]: 
+        - heading "Media Encoder" [level=3] [ref=e63]
+        - paragraph [ref=e64]: 98%
+      - generic [ref=e65]:
+        - generic [ref=e67]: 
+        - heading "Photoshop" [level=3] [ref=e68]
+        - paragraph [ref=e69]: Basic
+      - generic [ref=e70]:
+        - generic [ref=e72]: 
+        - heading "Illustrator" [level=3] [ref=e73]
+        - paragraph [ref=e74]: Basic
+      - generic [ref=e75]:
+        - generic [ref=e77]: 
+        - heading "Adobe Premiere Pro" [level=3] [ref=e78]
+        - paragraph [ref=e79]: 95%
+      - generic [ref=e80]:
+        - generic [ref=e82]: 
+        - heading "Final Cut Pro" [level=3] [ref=e83]
+        - paragraph [ref=e84]: 95%
+      - generic [ref=e85]:
+        - generic [ref=e87]: 
+        - heading "After Effects" [level=3] [ref=e88]
+        - paragraph [ref=e89]: 75%
+      - generic [ref=e90]:
+        - generic [ref=e92]: 
+        - heading "Media Encoder" [level=3] [ref=e93]
+        - paragraph [ref=e94]: 98%
+      - generic [ref=e95]:
+        - generic [ref=e97]: 
+        - heading "Photoshop" [level=3] [ref=e98]
+        - paragraph [ref=e99]: Basic
+      - generic [ref=e100]:
+        - generic [ref=e102]: 
+        - heading "Illustrator" [level=3] [ref=e103]
+        - paragraph [ref=e104]: Basic
+  - generic [ref=e106]:
+    - heading "Trusted by Leading Brands" [level=2] [ref=e107]
+    - generic [ref=e109]:
+      - generic [ref=e110]: Zee5
+      - generic [ref=e111]: Fitpage
+      - generic [ref=e112]: Tellychakkar
+      - generic [ref=e113]: BAPHM
+      - generic [ref=e114]: India Running
+      - generic [ref=e115]: Captured
+      - generic [ref=e116]: Ascend
+      - generic [ref=e117]: VS
+      - generic [ref=e118]: Wesness
+      - generic [ref=e119]: Zee5
+      - generic [ref=e120]: Fitpage
+      - generic [ref=e121]: Tellychakkar
+      - generic [ref=e122]: BAPHM
+      - generic [ref=e123]: India Running
+      - generic [ref=e124]: Captured
+      - generic [ref=e125]: Ascend
+      - generic [ref=e126]: VS
+      - generic [ref=e127]: Wesness
+  - generic [ref=e129]:
+    - heading "Portfolio" [level=2] [ref=e130]
+    - paragraph [ref=e131]: A showcase of recent video editing projects
+    - paragraph [ref=e134]: Loading videos...
+  - generic [ref=e137]:
+    - heading "Let's Work Together" [level=2] [ref=e138]
+    - paragraph [ref=e139]: Available for freelance projects and collaborations
+    - generic [ref=e140]:
+      - generic [ref=e141]:
+        - generic [ref=e143]: 
+        - link "asadfarooqui96@gmail.com" [ref=e144] [cursor=pointer]:
+          - /url: mailto:asadfarooqui96@gmail.com
+      - generic [ref=e145]:
+        - generic [ref=e147]: 
+        - link "+91 8779451008" [ref=e148] [cursor=pointer]:
+          - /url: tel:+918779451008
+      - generic [ref=e149]:
+        - generic [ref=e151]: 
+        - generic [ref=e152]: Mumbai, India
+    - generic [ref=e153]:
+      - link "Instagram" [ref=e154] [cursor=pointer]:
+        - /url: https://instagram.com
+        - generic [ref=e155]: 
+        - text: Instagram
+      - link "LinkedIn" [ref=e156] [cursor=pointer]:
+        - /url: https://linkedin.com
+        - generic [ref=e157]: 
+        - text: LinkedIn
+  - contentinfo [ref=e158]:
+    - generic [ref=e159]:
+      - paragraph [ref=e160]: © 2026 Asad Farooqi. All rights reserved.
+      - generic [ref=e161]:
+        - link "Instagram" [ref=e162] [cursor=pointer]:
+          - /url: https://instagram.com
+          - generic [ref=e163]: 
+        - link "LinkedIn" [ref=e164] [cursor=pointer]:
+          - /url: https://linkedin.com
+          - generic [ref=e165]: 
