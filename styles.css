@@ -565,25 +565,42 @@ ul, ol {
   max-width: 800px;
   z-index: 1;
   position: relative;
-  clip-path: inset(0 100% 0 0);
-  animation: revealClip 10s linear infinite;
+  overflow: hidden;
 }
 
-@keyframes revealClip {
+/* Curtain that slides away revealing text - matches playhead exactly */
+.hero-content::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--color-bg-primary);
+  transform: translateX(0);
+  animation: curtainSlide 10s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes curtainSlide {
   0% {
-    clip-path: inset(0 100% 0 0);
-  }
-  5% {
-    clip-path: inset(0 100% 0 0);
+    left: 5%;
   }
   45% {
-    clip-path: inset(0 0% 0 0);
+    left: 95%;
   }
   50% {
-    clip-path: inset(0 0% 0 0);
+    left: 95%;
+    opacity: 1;
+  }
+  50.01% {
+    left: 95%;
+    opacity: 0;
   }
   100% {
-    clip-path: inset(0 0% 0 0);
+    left: 95%;
+    opacity: 0;
   }
 }
 
