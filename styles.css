@@ -573,7 +573,13 @@ ul, ol {
   0% {
     clip-path: inset(0 100% 0 0);
   }
+  5% {
+    clip-path: inset(0 100% 0 0);
+  }
   45% {
+    clip-path: inset(0 0% 0 0);
+  }
+  50% {
     clip-path: inset(0 0% 0 0);
   }
   100% {
