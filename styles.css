@@ -388,15 +388,22 @@ ul, ol {
   overflow: hidden;
 }
 
+/* Animated gradient background */
 .hero::before {
   content: '';
   position: absolute;
-  top: 20%;
-  left: -10%;
-  right: -10%;
-  height: 4px;
-  background: linear-gradient(90deg, transparent, var(--color-track-purple), transparent);
-  animation: timelineSlide 8s linear infinite;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at center,
+    rgba(147, 51, 234, 0.15) 0%,
+    rgba(6, 182, 212, 0.1) 25%,
+    transparent 50%
+  );
+  animation: gradientRotate 20s linear infinite;
+  z-index: 0;
 }
 
 .hero::after {
@@ -408,6 +415,16 @@ ul, ol {
   height: 3px;
   background: linear-gradient(90deg, transparent, var(--color-track-cyan), transparent);
   animation: timelineSlide 12s linear infinite reverse;
+  z-index: 0;
+}
+
+@keyframes gradientRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes timelineSlide {
@@ -430,6 +447,21 @@ ul, ol {
   letter-spacing: 3px;
   margin-bottom: var(--spacing-sm);
   animation: fadeInUp 1s ease;
+  background: linear-gradient(45deg, #fff, #9333ea, #06b6d4, #fff);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fadeInUp 1s ease, gradientText 8s ease infinite;
+}
+
+@keyframes gradientText {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 .hero-subtitle {
@@ -446,11 +478,64 @@ ul, ol {
   margin-bottom: var(--spacing-md);
   opacity: 0.85;
   animation: fadeInUp 1s ease 0.4s backwards;
+  overflow: hidden;
+  border-right: 2px solid var(--color-track-purple);
+  white-space: nowrap;
+  animation: fadeInUp 1s ease 0.4s backwards, typing 3s steps(40) 0.8s forwards, blink 0.75s step-end infinite;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 
 .hero .cta-button {
   margin-top: var(--spacing-sm);
-  animation: fadeInUp 1s ease 0.6s backwards;
+  animation: fadeInUp 1s ease 0.6s backwards, buttonGlow 2s ease-in-out infinite alternate;
+  position: relative;
+  z-index: 1;
+}
+
+.hero .cta-button::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #9333ea, #06b6d4, #f97316, #10b981);
+  background-size: 400% 400%;
+  border-radius: 50px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: gradientRotate 8s linear infinite;
+}
+
+.hero .cta-button:hover::before {
+  opacity: 1;
+}
+
+@keyframes buttonGlow {
+  0% {
+    box-shadow: 0 4px 16px rgba(147, 51, 234, 0.4);
+  }
+  100% {
+    box-shadow: 0 8px 32px rgba(147, 51, 234, 0.7), 0 0 40px rgba(6, 182, 212, 0.3);
+  }
 }
 
 /* Scroll Indicator */
@@ -460,6 +545,7 @@ ul, ol {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
+  animation: fadeInUp 1s ease 1s backwards;
 }
 
 .scroll-indicator span {
@@ -470,6 +556,12 @@ ul, ol {
   border-radius: 12px;
   position: relative;
   opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-indicator span:hover {
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 .scroll-indicator span::before {
@@ -483,6 +575,7 @@ ul, ol {
   background-color: var(--color-text-light);
   border-radius: 2px;
   animation: scrollBounce 2s infinite;
+  box-shadow: 0 0 10px rgba(147, 51, 234, 0.6);
 }
 
 @keyframes fadeInUp {
@@ -634,6 +727,7 @@ ul, ol {
   background: var(--color-bg-primary);
   color: var(--color-text-light);
   position: relative;
+  overflow: hidden;
 }
 
 .skills::before {
@@ -650,11 +744,52 @@ ul, ol {
   color: var(--color-text-light);
 }
 
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--spacing-md);
+.skills-carousel-wrapper {
   margin-top: var(--spacing-lg);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.skills-carousel-wrapper::before,
+.skills-carousel-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.skills-carousel-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, var(--color-bg-primary), transparent);
+}
+
+.skills-carousel-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, var(--color-bg-primary), transparent);
+}
+
+.skills-carousel {
+  display: flex;
+  gap: var(--spacing-md);
+  animation: scrollSkills 30s linear infinite;
+  width: max-content;
+}
+
+.skills-carousel:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollSkills {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .skill-item {
@@ -666,14 +801,16 @@ ul, ol {
   padding: var(--spacing-md);
   text-align: center;
   transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-left-color var(--transition-fast);
+  min-width: 250px;
+  flex-shrink: 0;
 }
 
-.skill-item:nth-child(1) { border-left-color: var(--color-track-purple); }
-.skill-item:nth-child(2) { border-left-color: var(--color-track-cyan); }
-.skill-item:nth-child(3) { border-left-color: var(--color-track-orange); }
-.skill-item:nth-child(4) { border-left-color: var(--color-track-green); }
-.skill-item:nth-child(5) { border-left-color: var(--color-track-purple); }
-.skill-item:nth-child(6) { border-left-color: var(--color-track-cyan); }
+.skill-item:nth-child(6n+1) { border-left-color: var(--color-track-purple); }
+.skill-item:nth-child(6n+2) { border-left-color: var(--color-track-cyan); }
+.skill-item:nth-child(6n+3) { border-left-color: var(--color-track-orange); }
+.skill-item:nth-child(6n+4) { border-left-color: var(--color-track-green); }
+.skill-item:nth-child(6n+5) { border-left-color: var(--color-track-purple); }
+.skill-item:nth-child(6n+6) { border-left-color: var(--color-track-cyan); }
 
 .skill-item:hover {
   transform: translateY(-8px);
@@ -698,13 +835,6 @@ ul, ol {
   font-weight: var(--font-weight-light);
 }
 
-/* Responsive Skills */
-@media (max-width: 640px) {
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 /* ============================================
    Client Logos Section
    ============================================ */
@@ -713,6 +843,7 @@ ul, ol {
   padding: var(--spacing-xl) 0;
   background-color: var(--color-bg-secondary);
   position: relative;
+  overflow: hidden;
 }
 
 .clients::before {
@@ -725,12 +856,52 @@ ul, ol {
   background: linear-gradient(180deg, var(--color-track-orange), var(--color-track-green));
 }
 
-.clients-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: var(--spacing-md);
+.clients-carousel-wrapper {
   margin-top: var(--spacing-lg);
-  align-items: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.clients-carousel-wrapper::before,
+.clients-carousel-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.clients-carousel-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, var(--color-bg-secondary), transparent);
+}
+
+.clients-carousel-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, var(--color-bg-secondary), transparent);
+}
+
+.clients-carousel {
+  display: flex;
+  gap: var(--spacing-md);
+  animation: scrollClients 25s linear infinite;
+  width: max-content;
+}
+
+.clients-carousel:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollClients {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .client-logo-item {
@@ -745,9 +916,11 @@ ul, ol {
   font-weight: var(--font-weight-semibold);
   color: var(--color-text-muted);
   min-height: 100px;
+  min-width: 200px;
   text-align: center;
   opacity: 0.7;
   transition: all var(--transition-normal);
+  flex-shrink: 0;
 }
 
 .client-logo-item:hover {
@@ -756,19 +929,6 @@ ul, ol {
   color: var(--color-text-light);
   border-color: var(--color-track-purple);
   background-color: rgba(147, 51, 234, 0.1);
-}
-
-/* Responsive Clients Grid */
-@media (max-width: 1024px) {
-  .clients-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 640px) {
-  .clients-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 /* ============================================
