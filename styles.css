@@ -394,10 +394,10 @@ ul, ol {
 .hero::before {
   content: '';
   position: absolute;
-  top: 5%;
-  left: 5%;
-  right: 5%;
-  bottom: 15%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background:
     /* === V1 CLIPS with borders === */
     /* Clip 1 - Fill */
@@ -519,8 +519,8 @@ ul, ol {
   z-index: 0;
 }
 
-/* Animated Playhead */
-.hero::after {
+/* Animated Playhead - REMOVED per user request */
+/* .hero::after {
   content: '';
   position: absolute;
   top: 5%;
@@ -559,7 +559,7 @@ ul, ol {
   100% {
     left: 5%;
   }
-}
+} */
 
 .hero-content {
   max-width: 800px;
