@@ -659,6 +659,10 @@ ul, ol {
 
 /* Responsive Hero */
 @media (max-width: 768px) {
+  .hero::before {
+    display: none;
+  }
+
   .hero-title {
     font-size: 2.5rem;
   }
