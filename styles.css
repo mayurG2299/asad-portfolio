@@ -392,38 +392,7 @@ ul, ol {
 
 /* CINEMA-GRADE TIMELINE with VISIBLE CLIPS */
 .hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background:
-    /* Very subtle timeline texture - barely visible */
-    linear-gradient(135deg, rgba(147, 51, 234, 0.08), rgba(124, 58, 237, 0.08)) 5% 8% / 15% 10% no-repeat,
-    linear-gradient(135deg, rgba(147, 51, 234, 0.08), rgba(124, 58, 237, 0.08)) 25% 8% / 18% 10% no-repeat,
-    linear-gradient(135deg, rgba(147, 51, 234, 0.08), rgba(124, 58, 237, 0.08)) 50% 8% / 20% 10% no-repeat,
-    linear-gradient(135deg, rgba(147, 51, 234, 0.08), rgba(124, 58, 237, 0.08)) 75% 8% / 12% 10% no-repeat,
-
-    linear-gradient(90deg, rgba(6, 182, 212, 0.06), rgba(6, 182, 212, 0.06)) 5% 22% / 85% 6% no-repeat,
-
-    linear-gradient(135deg, rgba(249, 115, 22, 0.06), rgba(234, 88, 12, 0.06)) 10% 32% / 8% 6% no-repeat,
-    linear-gradient(135deg, rgba(249, 115, 22, 0.06), rgba(234, 88, 12, 0.06)) 50% 32% / 10% 6% no-repeat,
-
-    linear-gradient(90deg, rgba(16, 185, 129, 0.05), rgba(5, 150, 105, 0.05)) 5% 42% / 80% 8% no-repeat,
-
-    /* Panel background */
-    linear-gradient(180deg,
-      rgba(20, 20, 30, 0.7),
-      rgba(15, 15, 25, 0.8)
-    );
-  box-shadow:
-    inset 0 0 80px rgba(0, 0, 0, 0.7),
-    inset 0 2px 4px rgba(0, 0, 0, 0.5),
-    0 4px 30px rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(147, 51, 234, 0.2);
-  border-radius: 8px;
-  z-index: 0;
+  display: none;
 }
 
 /* Animated Playhead - Hidden */
