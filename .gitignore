@@ -23,3 +23,6 @@ build/
 
 # Vercel
 .vercel
+
+# Downloaded source videos (hosted on Google Drive, not needed in repo)
+downloads/

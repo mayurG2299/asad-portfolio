@@ -27,6 +27,11 @@ class VideoPlayer {
    * Render player DOM structure
    */
   render() {
+    if (this.videoData.driveId) {
+      this.renderDriveEmbed();
+      return;
+    }
+
     // Check if video data is valid
     if (!this.videoData.success) {
       this.renderFallback();
@@ -75,6 +80,27 @@ class VideoPlayer {
     this.elements.progressBar = this.container.querySelector('.progress-bar');
     this.elements.progressFill = this.container.querySelector('.progress-fill');
     this.elements.infoPanel = this.container.querySelector('.info-panel');
+  }
+
+  /**
+   * Render Google Drive iframe embed
+   */
+  renderDriveEmbed() {
+    this.container.innerHTML = `
+      <div class="video-player drive-embed">
+        <iframe
+          src="https://drive.google.com/file/d/${this.videoData.driveId}/preview"
+          allow="autoplay"
+          allowfullscreen
+          frameborder="0"
+          loading="lazy"
+        ></iframe>
+        <div class="drive-brand-label">
+          <span class="brand-name">${this.brandInfo.name}</span>
+          <span class="brand-description">${this.brandInfo.description}</span>
+        </div>
+      </div>
+    `;
   }
 
   /**

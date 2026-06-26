@@ -217,6 +217,44 @@
   }
 }
 
+/* Google Drive Embed */
+.drive-embed {
+  display: flex;
+  flex-direction: column;
+  aspect-ratio: unset;
+  height: auto;
+}
+
+.drive-embed iframe {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border: none;
+  display: block;
+  border-radius: 8px 8px 0 0;
+}
+
+.drive-brand-label {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.drive-brand-label .brand-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.drive-brand-label .brand-description {
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
 /* Accessibility */
 .video-player:focus-visible {
   outline: 2px solid #00ff88;
