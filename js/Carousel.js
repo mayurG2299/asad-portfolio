@@ -1,8 +1,9 @@
 class ReelCarousel {
   constructor(allVideos) {
-    this.all     = allVideos.filter(v => v.driveId);
-    this.videos  = this.all;
-    this.current = 0;
+    this.all        = allVideos.filter(v => v.driveId);
+    this.videos     = this.all;
+    this.current    = 0;
+    this.interacted = false;  // tracks whether user has gestured yet
     this.init();
   }
 
@@ -70,6 +71,18 @@ class ReelCarousel {
   }
 
   // ── Card HTML builders ────────────────────────────────────────────────────
+  tapHTML(v) {
+    return `
+      <img class="card-thumb" src="${this.thumbPath(v)}" alt="${v.brand}" />
+      <div class="card-tap-overlay">
+        <div class="card-tap-btn" aria-label="Play video">
+          <svg viewBox="0 0 24 24" fill="white" width="64" height="64"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+      </div>
+      <div class="card-brand-pill">${v.brand}</div>
+    `;
+  }
+
   activeHTML(v) {
     return `
       <div class="card-thumb-bg" style="background-image:url('${this.thumbPath(v)}')"></div>
@@ -110,8 +123,8 @@ class ReelCarousel {
       card.className = `reel-card ${state}`;
 
       if (nowActive && !wasActive) {
-        // Card just became active — inject iframe (triggers autoplay)
-        card.innerHTML = this.activeHTML(v);
+        // Card just became active
+        card.innerHTML = this.interacted ? this.activeHTML(v) : this.tapHTML(v);
       } else if (!nowActive && wasActive) {
         // Card just lost focus — kill the iframe, show thumbnail
         card.innerHTML = this.thumbHTML(v);
@@ -130,7 +143,8 @@ class ReelCarousel {
   }
 
   // ── Navigation ────────────────────────────────────────────────────────────
-  goTo(index) {
+  goTo(index, fromInteraction = false) {
+    if (fromInteraction) this.interacted = true;
     const n = this.videos.length;
     this.current = ((index % n) + n) % n;
     this.render();
@@ -147,14 +161,21 @@ class ReelCarousel {
   // ── Events ────────────────────────────────────────────────────────────────
   bindEvents() {
     document.querySelector('.reel-nav-prev')
-      .addEventListener('click', () => this.goTo(this.current - 1));
+      .addEventListener('click', () => this.goTo(this.current - 1, true));
     document.querySelector('.reel-nav-next')
-      .addEventListener('click', () => this.goTo(this.current + 1));
+      .addEventListener('click', () => this.goTo(this.current + 1, true));
 
     this.track.addEventListener('click', e => {
       const card = e.target.closest('.reel-card');
-      if (card && !card.classList.contains('state-active')) {
-        this.goTo(parseInt(card.dataset.index));
+      if (!card) return;
+      if (card.classList.contains('state-active')) {
+        // Tap-to-play: swap tap overlay for real iframe
+        if (card.querySelector('.card-tap-overlay')) {
+          this.interacted = true;
+          card.innerHTML = this.activeHTML(this.videos[this.current]);
+        }
+      } else {
+        this.goTo(parseInt(card.dataset.index), true);
       }
     });
 
@@ -167,15 +188,15 @@ class ReelCarousel {
     });
 
     document.addEventListener('keydown', e => {
-      if (e.key === 'ArrowLeft')  this.goTo(this.current - 1);
-      if (e.key === 'ArrowRight') this.goTo(this.current + 1);
+      if (e.key === 'ArrowLeft')  this.goTo(this.current - 1, true);
+      if (e.key === 'ArrowRight') this.goTo(this.current + 1, true);
     });
 
     let tx = 0;
     this.track.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
     this.track.addEventListener('touchend', e => {
       const d = tx - e.changedTouches[0].clientX;
-      if (Math.abs(d) > 50) d > 0 ? this.goTo(this.current + 1) : this.goTo(this.current - 1);
+      if (Math.abs(d) > 50) d > 0 ? this.goTo(this.current + 1, true) : this.goTo(this.current - 1, true);
     });
 
     document.addEventListener('visibilitychange', () => {

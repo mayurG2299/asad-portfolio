@@ -176,6 +176,36 @@
   text-transform: uppercase;
 }
 
+/* ── Tap-to-play overlay (first load, before user gesture) ─────────────── */
+.card-tap-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.28);
+  cursor: pointer;
+  z-index: 20;
+}
+
+.card-tap-btn {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: rgba(139, 92, 246, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 40px rgba(139, 92, 246, 0.5);
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+
+.card-tap-btn:hover {
+  transform: scale(1.1);
+  background: rgba(139, 92, 246, 1);
+}
+
 /* ── Side Card — thumbnail + overlay ───────────────────────────────────── */
 .card-thumb {
   width: 100%;
