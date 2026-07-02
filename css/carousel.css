@@ -307,11 +307,11 @@
 
 /* ── Mobile ─────────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
-  .reel-stage { height: 520px; }
-  .reel-card  { width: 250px; }
+  .reel-stage { height: 650px; }
+  .reel-card  { width: clamp(290px, 86vw, 320px); }
 
-  .reel-card.state-prev1 { transform: translateX(-275px) scale(0.74); opacity: 0.5; }
-  .reel-card.state-next1 { transform: translateX(275px)  scale(0.74); opacity: 0.5; }
+  .reel-card.state-prev1 { transform: translateX(-350px) scale(0.74); opacity: 0.5; }
+  .reel-card.state-next1 { transform: translateX(350px)  scale(0.74); opacity: 0.5; }
   .reel-card.state-prev2,
   .reel-card.state-next2 { opacity: 0; pointer-events: none; }
 
