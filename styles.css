@@ -634,6 +634,20 @@ ul, ol {
   .headshot {
     max-width: 300px;
   }
+
+  .about-stats {
+    gap: var(--spacing-xs);
+  }
+
+  .stat {
+    min-width: 0;
+    flex: 1;
+    padding: var(--spacing-xs);
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
 }
 
 /* ============================================
