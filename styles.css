@@ -310,6 +310,8 @@ ul, ol {
   width: 30px;
   height: 24px;
   cursor: pointer;
+  position: relative;
+  z-index: calc(var(--z-navbar) + 1);
 }
 
 .hamburger {
