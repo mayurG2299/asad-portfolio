@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initNavigation();
   initScrollAnimations();
+  initStatCounters();
   initCustomVideoPlayers();
 });
 
@@ -117,6 +118,50 @@ function setupPortfolioScrollAnimations() {
   const portfolioItems = document.querySelectorAll('.portfolio-item.animate-on-scroll');
   portfolioItems.forEach(el => observer.observe(el));
   console.log(`[INFO] Observing ${portfolioItems.length} portfolio items for scroll animations`);
+}
+
+// ============================================
+// Stat Counters (number ticker)
+// ============================================
+
+function initStatCounters() {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) return;
+
+  const counters = Array.from(document.querySelectorAll('.stat-value'))
+    .map(el => {
+      const match = el.textContent.match(/^(\d+)(.*)$/);
+      return match ? { el, target: parseInt(match[1], 10), suffix: match[2] } : null;
+    })
+    .filter(Boolean);
+
+  if (counters.length === 0) return;
+
+  const animateCount = ({ el, target, suffix }) => {
+    const duration = 1200;
+    const startTime = performance.now();
+
+    const tick = (now) => {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3); // ease-out-cubic
+      el.textContent = `${Math.round(target * eased)}${suffix}`;
+      if (progress < 1) requestAnimationFrame(tick);
+    };
+
+    el.textContent = `0${suffix}`;
+    requestAnimationFrame(tick);
+  };
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const counter = counters.find(c => c.el === entry.target);
+      if (counter) animateCount(counter);
+      obs.unobserve(entry.target);
+    });
+  }, { threshold: 0.4 });
+
+  counters.forEach(({ el }) => observer.observe(el));
 }
 
 // ============================================

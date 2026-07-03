@@ -66,10 +66,16 @@
   --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.15);
   --shadow-large: 0 8px 32px rgba(0, 0, 0, 0.2);
 
+  /* Easing curves */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out-soft: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
   /* Transitions */
-  --transition-fast: 0.2s ease;
-  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: 0.6s ease;
+  --transition-fast: 0.2s var(--ease-out-soft);
+  --transition-normal: 0.35s var(--ease-out-expo);
+  --transition-slow: 0.7s var(--ease-out-expo);
+  --transition-press: 0.15s var(--ease-out-soft);
 
   /* Z-index */
   --z-navbar: 1000;
@@ -126,6 +132,12 @@ button {
   background: none;
 }
 
+/* Press / tap feedback -- any element meant to be pressed gets a physical squash */
+button:active {
+  transform: scale(0.94);
+  transition: transform var(--transition-press);
+}
+
 /* Lists */
 ul, ol {
   list-style: none;
@@ -178,13 +190,41 @@ ul, ol {
 /* Scroll Animations */
 .animate-on-scroll {
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(24px);
   transition: opacity var(--transition-slow), transform var(--transition-slow);
 }
 
 .animate-on-scroll.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* About section: orchestrated two-part reveal instead of one flat fade -- the
+   grid wrapper itself no longer moves, its image and text cascade in separately. */
+.about-grid.animate-on-scroll {
+  opacity: 1;
+  transform: none;
+}
+
+.about-grid .about-image,
+.about-grid .about-content {
+  opacity: 0;
+  transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
+}
+
+.about-grid .about-image {
+  transform: translateY(24px) scale(0.96);
+}
+
+.about-grid .about-content {
+  transform: translateX(24px);
+  transition-delay: 0.15s;
+}
+
+.about-grid.visible .about-image,
+.about-grid.visible .about-content {
+  opacity: 1;
+  transform: none;
 }
 
 /* CTA Button */
@@ -202,6 +242,11 @@ ul, ol {
 .cta-button:hover {
   transform: scale(1.05);
   box-shadow: var(--shadow-large);
+}
+
+.cta-button:active {
+  transform: scale(0.96);
+  transition: transform var(--transition-press);
 }
 
 /* Loading Spinner */
@@ -435,6 +480,7 @@ ul, ol {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: heroTitleIn 0.9s var(--ease-out-expo) 0.1s backwards;
 }
 
 .hero-subtitle {
@@ -442,6 +488,7 @@ ul, ol {
   font-weight: var(--font-weight-light);
   margin-bottom: var(--spacing-sm);
   color: rgba(255, 255, 255, 0.9);
+  animation: fadeInUp 0.8s var(--ease-out-expo) 0.35s backwards;
 }
 
 .hero-tagline {
@@ -449,6 +496,7 @@ ul, ol {
   font-weight: var(--font-weight-light);
   margin-bottom: var(--spacing-md);
   color: rgba(255, 255, 255, 0.85);
+  animation: fadeInUp 0.8s var(--ease-out-expo) 0.5s backwards;
 }
 
 .hero .cta-button {
@@ -463,7 +511,7 @@ ul, ol {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
-  animation: fadeInUp 1s ease 1s backwards;
+  animation: fadeInUp 0.8s var(--ease-out-expo) 1.1s backwards;
 }
 
 .scroll-indicator span {
@@ -504,6 +552,17 @@ ul, ol {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes heroTitleIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
 
@@ -608,6 +667,7 @@ ul, ol {
 .stat-value {
   font-size: 2rem;
   font-weight: var(--font-weight-bold);
+  font-variant-numeric: tabular-nums;
   background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -710,6 +770,7 @@ ul, ol {
   gap: var(--spacing-md);
   animation: scrollSkills 30s linear infinite;
   width: max-content;
+  will-change: transform;
 }
 
 .skills-carousel:hover {
@@ -822,6 +883,7 @@ ul, ol {
   gap: var(--spacing-md);
   animation: scrollClients 25s linear infinite;
   width: max-content;
+  will-change: transform;
 }
 
 .clients-carousel:hover {
@@ -1082,6 +1144,11 @@ ul, ol {
 .social-link:hover {
   transform: scale(1.05);
   background: rgba(255, 255, 255, 0.3);
+}
+
+.social-link:active {
+  transform: scale(0.96);
+  transition: transform var(--transition-press);
 }
 
 /* ============================================
