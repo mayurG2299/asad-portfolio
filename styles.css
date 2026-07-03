@@ -565,6 +565,7 @@ ul, ol {
 .headshot {
   width: 100%;
   max-width: 400px;
+  margin: 0 auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   border-radius: 1rem;
