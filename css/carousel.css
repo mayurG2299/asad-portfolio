@@ -87,15 +87,17 @@
     0 40px 100px rgba(0, 0, 0, 0.8);
 }
 
-/* Adjacent cards */
+/* Adjacent cards -- offset scales with viewport width (capped at the desktop
+   value) so the peek card can never sit further off-center than the screen
+   actually has room for, at any width above the mobile breakpoint. */
 .reel-card.state-prev1 {
-  transform: translateX(-390px) scale(0.76);
+  transform: translateX(calc(-1 * min(390px, 28vw))) scale(0.76);
   opacity: 0.6;
   z-index: 5;
   cursor: pointer;
 }
 .reel-card.state-next1 {
-  transform: translateX(390px) scale(0.76);
+  transform: translateX(min(390px, 28vw)) scale(0.76);
   opacity: 0.6;
   z-index: 5;
   cursor: pointer;
@@ -103,13 +105,13 @@
 
 /* Far cards */
 .reel-card.state-prev2 {
-  transform: translateX(-660px) scale(0.56);
+  transform: translateX(calc(-1 * min(660px, 32vw))) scale(0.56);
   opacity: 0.22;
   z-index: 2;
   cursor: pointer;
 }
 .reel-card.state-next2 {
-  transform: translateX(660px) scale(0.56);
+  transform: translateX(min(660px, 32vw)) scale(0.56);
   opacity: 0.22;
   z-index: 2;
   cursor: pointer;
@@ -319,7 +321,9 @@
 /* ── Mobile ─────────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .reel-stage { height: 650px; }
-  .reel-card  { width: clamp(290px, 86vw, 320px); }
+  /* Fixed, not fluid: Drive's own player-control bar needs ~320px of real
+     width to render without clipping, regardless of the phone's screen size. */
+  .reel-card  { width: 320px; }
 
   .reel-card.state-prev1,
   .reel-card.state-next1,

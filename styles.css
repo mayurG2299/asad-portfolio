@@ -217,7 +217,7 @@ ul, ol {
 }
 
 .about-grid .about-content {
-  transform: translateX(24px);
+  transform: translateY(24px);
   transition-delay: 0.15s;
 }
 
