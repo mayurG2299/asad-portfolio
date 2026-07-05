@@ -100,6 +100,28 @@ body {
   overflow-x: hidden;
 }
 
+/* Cinematic finish: a faint film-grain texture + edge vignette over the whole
+   page. Fixed + pointer-events:none so it never affects layout or clicks. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 45%, rgba(0, 0, 0, 0.4) 100%);
+}
+
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
@@ -171,7 +193,7 @@ ul, ol {
   margin-bottom: var(--spacing-md);
   color: var(--color-text-light);
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   position: relative;
   padding-bottom: 1rem;
 }
@@ -474,7 +496,7 @@ ul, ol {
 .hero-title {
   font-size: var(--font-size-hero);
   font-weight: var(--font-weight-bold);
-  letter-spacing: 3px;
+  letter-spacing: -0.02em;
   margin-bottom: var(--spacing-sm);
   background: linear-gradient(135deg, #fff 0%, #9333ea 50%, #06b6d4 100%);
   -webkit-background-clip: text;
