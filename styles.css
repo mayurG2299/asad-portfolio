@@ -600,16 +600,6 @@ ul, ol {
   position: relative;
 }
 
-.about::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(180deg, var(--color-track-purple), var(--color-track-cyan));
-}
-
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
@@ -723,16 +713,6 @@ ul, ol {
   overflow: hidden;
 }
 
-.skills::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(180deg, var(--color-track-cyan), var(--color-track-orange));
-}
-
 .skills .section-heading {
   color: var(--color-text-light);
 }
@@ -840,15 +820,6 @@ ul, ol {
   overflow: hidden;
 }
 
-.clients::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(180deg, var(--color-track-orange), var(--color-track-green));
-}
 
 .clients-carousel-wrapper {
   margin-top: var(--spacing-lg);
@@ -936,15 +907,6 @@ ul, ol {
   position: relative;
 }
 
-.portfolio::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(180deg, var(--color-track-green), var(--color-track-purple));
-}
 
 .portfolio-subtitle {
   text-align: center;
